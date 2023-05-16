@@ -32,10 +32,6 @@ Yechan Kang, Sanghyeon Lee
 
 ## Project Timetable
 
----
-
-timetable
-
 ![Timeline - export.png](README_assets/5bf521bee19c065254c7eeccf45d798d4df47cc4.png)
 
 
