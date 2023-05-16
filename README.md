@@ -6,8 +6,6 @@ summary
 
 ## Table of Contents
 
----
-
 - first
 
 - second
@@ -18,13 +16,9 @@ summary
 
 ## Members
 
----
-
 Yechan Kang, Sanghyeon Lee
 
 ## Overview
-
----
 
 - 영화 추천
 
@@ -38,8 +32,6 @@ Yechan Kang, Sanghyeon Lee
 
 ## Technologies
 
----
-
 Project is created with:
 
 - Django ?-?
@@ -51,8 +43,6 @@ Project is created with:
 - Vue.js ?
 
 - JavaScript ?
-
----
 
 ### Features
 
@@ -72,11 +62,9 @@ Project is created with:
 
 
 
----
-
 ## Launch
 
-
+실행화면
 
 ---
 
