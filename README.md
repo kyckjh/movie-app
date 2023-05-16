@@ -2,7 +2,13 @@
 
 ---
 
+
+
+
 summary
+
+
+
 
 ## Table of Contents
 
@@ -14,15 +20,20 @@ summary
 
 
 
+
 ## Members
 
-Yechan Kang, Sanghyeon Lee
+Yechan Kang, Sanghyuk Lee
+
+
+
 
 ## Overview
 
 - 영화 추천
 
 - 관련 커뮤니티 기능 구현
+   
 
 ## Project Timetable
 
@@ -30,19 +41,22 @@ Yechan Kang, Sanghyeon Lee
 
 
 
+
 ## Technologies
 
 Project is created with:
 
-- Django ?-?
+- Django 3.2.18
 
-- Bootstrap 3.?
+- Bootstrap 5.3
 
 - Python 3.6
 
-- Vue.js ?
+- Vue.js 2
 
-- JavaScript ?
+- JavaScript ES6+
+
+### 
 
 ### Features
 
@@ -60,17 +74,22 @@ Project is created with:
   
   - ~~[SPA] Accessible from port `8000` for local development~~
 
+
+
+
 ## Database Design
 
-
-
 ![database design.png](README_assets/b8256e76b57c5223608f8e9627046b9393c35365.png)
+
 
 
 
 ## Launch
 
 실행화면
+
+
+
 
 ---
 
