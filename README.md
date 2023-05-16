@@ -60,6 +60,12 @@ Project is created with:
   
   - ~~[SPA] Accessible from port `8000` for local development~~
 
+## Database Design
+
+
+
+![database design.png](README_assets/b8256e76b57c5223608f8e9627046b9393c35365.png)
+
 
 
 ## Launch
