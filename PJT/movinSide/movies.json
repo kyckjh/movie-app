@@ -1,11 +1,14 @@
 [
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 1,
     "fields": {
       "adult": false,
       "backdrop_path": "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
-      "genre_ids": [18, 80],
+      "genre_ids": [
+        18,
+        80
+      ],
       "id": 238,
       "original_language": "en",
       "original_title": "The Godfather",
@@ -20,12 +23,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 2,
     "fields": {
       "adult": false,
       "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
-      "genre_ids": [18, 80],
+      "genre_ids": [
+        18,
+        80
+      ],
       "id": 278,
       "original_language": "en",
       "original_title": "The Shawshank Redemption",
@@ -40,12 +46,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 3,
     "fields": {
       "adult": false,
       "backdrop_path": "/ejnlCzBd5pOGAYCpxC93NXSrdrz.jpg",
-      "genre_ids": [35, 14],
+      "genre_ids": [
+        35,
+        14
+      ],
       "id": 772071,
       "original_language": "es",
       "original_title": "Cuando Sea Joven",
@@ -60,12 +69,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 4,
     "fields": {
       "adult": false,
       "backdrop_path": "/oo4PVK6AyLZN49BokxDFGyclN86.jpg",
-      "genre_ids": [18, 80],
+      "genre_ids": [
+        18,
+        80
+      ],
       "id": 240,
       "original_language": "en",
       "original_title": "The Godfather Part II",
@@ -80,12 +92,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 5,
     "fields": {
       "adult": false,
       "backdrop_path": "/vI3aUGTuRRdM7J78KIdW98LdxE5.jpg",
-      "genre_ids": [35, 18, 10749],
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
       "id": 19404,
       "original_language": "hi",
       "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
@@ -100,12 +116,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 6,
     "fields": {
       "adult": false,
       "backdrop_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
-      "genre_ids": [18, 36, 10752],
+      "genre_ids": [
+        18,
+        36,
+        10752
+      ],
       "id": 424,
       "original_language": "en",
       "original_title": "Schindler's List",
@@ -120,12 +140,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 7,
     "fields": {
       "adult": false,
       "backdrop_path": "/Ab8mkHmkYADjU7wQiOkia9BzGvS.jpg",
-      "genre_ids": [16, 10751, 14],
+      "genre_ids": [
+        16,
+        10751,
+        14
+      ],
       "id": 129,
       "original_language": "ja",
       "original_title": "千と千尋の神隠し",
@@ -140,12 +164,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 8,
     "fields": {
       "adult": false,
       "backdrop_path": "/tj6iPnz18hGfr0LKqWmG6Cp3niO.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 389,
       "original_language": "en",
       "original_title": "12 Angry Men",
@@ -160,12 +186,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 9,
     "fields": {
       "adult": false,
       "backdrop_path": "/dIWwZW7dJJtqC6CgWzYkNVKIUm8.jpg",
-      "genre_ids": [10749, 16, 18],
+      "genre_ids": [
+        10749,
+        16,
+        18
+      ],
       "id": 372058,
       "original_language": "ja",
       "original_title": "君の名は。",
@@ -180,12 +210,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 10,
     "fields": {
       "adult": false,
       "backdrop_path": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
-      "genre_ids": [35, 53, 18],
+      "genre_ids": [
+        35,
+        53,
+        18
+      ],
       "id": 496243,
       "original_language": "ko",
       "original_title": "기생충",
@@ -200,12 +234,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 11,
     "fields": {
       "adult": false,
       "backdrop_path": "/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
-      "genre_ids": [18, 28, 80, 53],
+      "genre_ids": [
+        18,
+        28,
+        80,
+        53
+      ],
       "id": 155,
       "original_language": "en",
       "original_title": "The Dark Knight",
@@ -220,12 +259,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 12,
     "fields": {
       "adult": false,
       "backdrop_path": "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
-      "genre_ids": [14, 18, 80],
+      "genre_ids": [
+        14,
+        18,
+        80
+      ],
       "id": 497,
       "original_language": "en",
       "original_title": "The Green Mile",
@@ -240,12 +283,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 13,
     "fields": {
       "adult": false,
       "backdrop_path": "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-      "genre_ids": [53, 80],
+      "genre_ids": [
+        53,
+        80
+      ],
       "id": 680,
       "original_language": "en",
       "original_title": "Pulp Fiction",
@@ -260,12 +306,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 14,
     "fields": {
       "adult": false,
       "backdrop_path": "/eoCSp75lxatmIa6aGqfnzwtbttd.jpg",
-      "genre_ids": [37],
+      "genre_ids": [
+        37
+      ],
       "id": 429,
       "original_language": "it",
       "original_title": "Il buono, il brutto, il cattivo",
@@ -280,12 +328,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 15,
     "fields": {
       "adult": false,
       "backdrop_path": "/3h1JZGDhZ8nzxdgvkxha0qBqi05.jpg",
-      "genre_ids": [35, 18, 10749],
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
       "id": 13,
       "original_language": "en",
       "original_title": "Forrest Gump",
@@ -300,12 +352,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 16,
     "fields": {
       "adult": false,
       "backdrop_path": "/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
-      "genre_ids": [12, 14, 28],
+      "genre_ids": [
+        12,
+        14,
+        28
+      ],
       "id": 122,
       "original_language": "en",
       "original_title": "The Lord of the Rings: The Return of the King",
@@ -320,12 +376,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 17,
     "fields": {
       "adult": false,
       "backdrop_path": "/3RMLbSEXOn1CzLoNT7xFeLfdxhq.jpg",
-      "genre_ids": [10749, 16],
+      "genre_ids": [
+        10749,
+        16
+      ],
       "id": 372754,
       "original_language": "ja",
       "original_title": "同級生",
@@ -340,12 +399,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 18,
     "fields": {
       "adult": false,
       "backdrop_path": "/sw7mordbZxgITU877yTpZCud90M.jpg",
-      "genre_ids": [18, 80],
+      "genre_ids": [
+        18,
+        80
+      ],
       "id": 769,
       "original_language": "en",
       "original_title": "GoodFellas",
@@ -360,12 +422,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 19,
     "fields": {
       "adult": false,
       "backdrop_path": "/uBZQOYZLIU9dBmd62fdzBAoropu.jpg",
-      "genre_ids": [28, 12, 16, 18],
+      "genre_ids": [
+        28,
+        12,
+        16,
+        18
+      ],
       "id": 704264,
       "original_language": "en",
       "original_title": "Primal: Tales of Savagery",
@@ -380,12 +447,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 20,
     "fields": {
       "adult": false,
       "backdrop_path": "/wxaBkuqVIgImjRHEMJoxL9Lq6i8.jpg",
-      "genre_ids": [16, 10751, 12, 14],
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        14
+      ],
       "id": 995133,
       "original_language": "en",
       "original_title": "The Boy, the Mole, the Fox and the Horse",
@@ -400,12 +472,18 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 21,
     "fields": {
       "adult": false,
       "backdrop_path": "/jr8tSoJGj33XLgFBy6lmZhpGQNu.jpg",
-      "genre_ids": [16, 10751, 14, 12, 35],
+      "genre_ids": [
+        16,
+        10751,
+        14,
+        12,
+        35
+      ],
       "id": 315162,
       "original_language": "en",
       "original_title": "Puss in Boots: The Last Wish",
@@ -420,12 +498,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 22,
     "fields": {
       "adult": false,
       "backdrop_path": "/1EAxNqdkVnp48a7NUuNBHGflowM.jpg",
-      "genre_ids": [16, 28, 878, 18],
+      "genre_ids": [
+        16,
+        28,
+        878,
+        18
+      ],
       "id": 283566,
       "original_language": "ja",
       "original_title": "シン・エヴァンゲリオン劇場版:||",
@@ -440,12 +523,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 23,
     "fields": {
       "adult": false,
       "backdrop_path": "/5QWHHjwIPoaJYHNVL0D00bxDUUC.jpg",
-      "genre_ids": [16, 14, 28, 12],
+      "genre_ids": [
+        16,
+        14,
+        28,
+        12
+      ],
       "id": 795607,
       "original_language": "zh",
       "original_title": "白蛇 II: 青蛇劫起",
@@ -460,12 +548,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 24,
     "fields": {
       "adult": false,
       "backdrop_path": "/dVanL4a1kx0mXeZSOhVWSiJ27Pa.jpg",
-      "genre_ids": [16, 53],
+      "genre_ids": [
+        16,
+        53
+      ],
       "id": 10494,
       "original_language": "ja",
       "original_title": "PERFECT BLUE",
@@ -480,12 +571,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 25,
     "fields": {
       "adult": false,
       "backdrop_path": "/9Qs9oyn4iE8QtQjGZ0Hp2WyYNXT.jpg",
-      "genre_ids": [18, 10752],
+      "genre_ids": [
+        18,
+        10752
+      ],
       "id": 28,
       "original_language": "en",
       "original_title": "Apocalypse Now",
@@ -500,12 +594,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 26,
     "fields": {
       "adult": false,
       "backdrop_path": "/sQkRiQo3nLrQYMXZodDjNUJKHZV.jpg",
-      "genre_ids": [16, 28, 878],
+      "genre_ids": [
+        16,
+        28,
+        878
+      ],
       "id": 618344,
       "original_language": "en",
       "original_title": "Justice League Dark: Apokolips War",
@@ -520,12 +618,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 27,
     "fields": {
       "adult": false,
       "backdrop_path": "/f72GEQF2lKsdmEULSI9bWCbQylH.jpg",
-      "genre_ids": [80, 18, 53, 36],
+      "genre_ids": [
+        80,
+        18,
+        53,
+        36
+      ],
       "id": 29259,
       "original_language": "fr",
       "original_title": "Le Trou",
@@ -540,12 +643,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 28,
     "fields": {
       "adult": false,
       "backdrop_path": "/u1wHUA0R48FH4WV3sGqjwx3aNZm.jpg",
-      "genre_ids": [16, 18, 10402, 10749],
+      "genre_ids": [
+        16,
+        18,
+        10402,
+        10749
+      ],
       "id": 632632,
       "original_language": "ja",
       "original_title": "映画 ギヴン",
@@ -560,12 +668,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 29,
     "fields": {
       "adult": false,
       "backdrop_path": "/4YbHir4Ka4kG7WOdh0anXv1iT8s.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 637920,
       "original_language": "tr",
       "original_title": "7. Koğuştaki Mucize",
@@ -580,12 +690,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 30,
     "fields": {
       "adult": false,
       "backdrop_path": "/6rmb35g7XoMCMQtnbH0rUecFZlV.jpg",
-      "genre_ids": [18, 10402, 10749],
+      "genre_ids": [
+        18,
+        10402,
+        10749
+      ],
       "id": 10376,
       "original_language": "it",
       "original_title": "La leggenda del pianista sull'oceano",
@@ -600,12 +714,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 31,
     "fields": {
       "adult": false,
       "backdrop_path": "/3G9YiVm0bQB1XyyyiDzfeNCiFLw.jpg",
-      "genre_ids": [18, 10752],
+      "genre_ids": [
+        18,
+        10752
+      ],
       "id": 975,
       "original_language": "en",
       "original_title": "Paths of Glory",
@@ -620,12 +737,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 32,
     "fields": {
       "adult": false,
       "backdrop_path": "/bGksau9GGu0uJ8DJQ8DYc9JW5LM.jpg",
-      "genre_ids": [18, 35],
+      "genre_ids": [
+        18,
+        35
+      ],
       "id": 77338,
       "original_language": "fr",
       "original_title": "Intouchables",
@@ -640,12 +760,22 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 33,
     "fields": {
       "adult": false,
       "backdrop_path": "/dW7F0nNVbjFesNKdw950GJ07T4p.jpg",
-      "genre_ids": [10770, 16, 878, 28, 12, 35, 18, 14, 10402],
+      "genre_ids": [
+        10770,
+        16,
+        878,
+        28,
+        12,
+        35,
+        18,
+        14,
+        10402
+      ],
       "id": 537061,
       "original_language": "en",
       "original_title": "Steven Universe: The Movie",
@@ -660,12 +790,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 34,
     "fields": {
       "adult": false,
       "backdrop_path": "/3eFJbv3repyWRiZDmcUYgccdQ6o.jpg",
-      "genre_ids": [80, 18, 10749],
+      "genre_ids": [
+        80,
+        18,
+        10749
+      ],
       "id": 15804,
       "original_language": "zh",
       "original_title": "牯嶺街少年殺人事件",
@@ -680,12 +814,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 35,
     "fields": {
       "adult": false,
       "backdrop_path": "/dIHezuC3AmylT8mkXQiWSjz2wJR.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 265177,
       "original_language": "fr",
       "original_title": "Mommy",
@@ -700,12 +836,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 36,
     "fields": {
       "adult": false,
       "backdrop_path": "/foc0hOprAdNpk1auscKqtipMtT5.jpg",
-      "genre_ids": [18, 53, 9648, 28],
+      "genre_ids": [
+        18,
+        53,
+        9648,
+        28
+      ],
       "id": 670,
       "original_language": "ko",
       "original_title": "올드보이",
@@ -720,12 +861,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 37,
     "fields": {
       "adult": false,
       "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
-      "genre_ids": [12, 878, 28],
+      "genre_ids": [
+        12,
+        878,
+        28
+      ],
       "id": 299534,
       "original_language": "en",
       "original_title": "Avengers: Endgame",
@@ -740,12 +885,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 38,
     "fields": {
       "adult": false,
       "backdrop_path": "/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg",
-      "genre_ids": [12, 28, 878],
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
       "id": 299536,
       "original_language": "en",
       "original_title": "Avengers: Infinity War",
@@ -760,12 +909,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 39,
     "fields": {
       "adult": false,
       "backdrop_path": "/pi3yXaJzVxZUayUfqMekcsN199A.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 575813,
       "original_language": "zh",
       "original_title": "少年的你",
@@ -780,12 +931,18 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 40,
     "fields": {
       "adult": false,
       "backdrop_path": "/2u1YG0pgm5bIOXO2OVWLNdMl23f.jpg",
-      "genre_ids": [16, 10751, 12, 35, 14],
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        35,
+        14
+      ],
       "id": 508965,
       "original_language": "en",
       "original_title": "Klaus",
@@ -800,12 +957,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 41,
     "fields": {
       "adult": false,
       "backdrop_path": "/mpNd0rTVrp6vHJ9Je7wSa3zC8JS.jpg",
-      "genre_ids": [12, 14, 16],
+      "genre_ids": [
+        12,
+        14,
+        16
+      ],
       "id": 128,
       "original_language": "ja",
       "original_title": "もののけ姫",
@@ -820,12 +981,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 42,
     "fields": {
       "adult": false,
       "backdrop_path": "/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg",
-      "genre_ids": [10749, 18],
+      "genre_ids": [
+        10749,
+        18
+      ],
       "id": 851644,
       "original_language": "ko",
       "original_title": "20세기 소녀",
@@ -840,12 +1004,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 43,
     "fields": {
       "adult": false,
       "backdrop_path": "/aLqtWLA6NQHBwQHvHDq5z4EKUm0.jpg",
-      "genre_ids": [16, 14, 10749, 18],
+      "genre_ids": [
+        16,
+        14,
+        10749,
+        18
+      ],
       "id": 533514,
       "original_language": "ja",
       "original_title": "劇場版 ヴァイオレット・エヴァーガーデン",
@@ -860,12 +1029,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 44,
     "fields": {
       "adult": false,
       "backdrop_path": "/n0Cju2Eu3VyrUFl32thblHFWznA.jpg",
-      "genre_ids": [35, 10749, 18],
+      "genre_ids": [
+        35,
+        10749,
+        18
+      ],
       "id": 901,
       "original_language": "en",
       "original_title": "City Lights",
@@ -880,12 +1053,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 45,
     "fields": {
       "adult": false,
       "backdrop_path": "/A62quSOB8otoZvGiLvMVZ9G4BiO.jpg",
-      "genre_ids": [80, 18, 9648, 53],
+      "genre_ids": [
+        80,
+        18,
+        9648,
+        53
+      ],
       "id": 12493,
       "original_language": "ja",
       "original_title": "天国と地獄",
@@ -900,12 +1078,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 46,
     "fields": {
       "adult": false,
       "backdrop_path": "/jRJrQ72VLyEnVsvwfep8Xjlvu8c.jpg",
-      "genre_ids": [80, 18, 28],
+      "genre_ids": [
+        80,
+        18,
+        28
+      ],
       "id": 101,
       "original_language": "en",
       "original_title": "Léon: The Professional",
@@ -920,12 +1102,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 47,
     "fields": {
       "adult": false,
       "backdrop_path": "/1fOsyhVz5qyX2rl1qqX6KImVhTx.jpg",
-      "genre_ids": [18, 35],
+      "genre_ids": [
+        18,
+        35
+      ],
       "id": 644479,
       "original_language": "es",
       "original_title": "Dedicada A Mi Ex",
@@ -940,12 +1125,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 48,
     "fields": {
       "adult": false,
       "backdrop_path": "/hpzQHv8cA7j2Dn2CphOFYmllXzj.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 207,
       "original_language": "en",
       "original_title": "Dead Poets Society",
@@ -960,12 +1147,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 49,
     "fields": {
       "adult": false,
       "backdrop_path": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
-      "genre_ids": [12, 35, 878],
+      "genre_ids": [
+        12,
+        35,
+        878
+      ],
       "id": 105,
       "original_language": "en",
       "original_title": "Back to the Future",
@@ -980,12 +1171,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 50,
     "fields": {
       "adult": false,
       "backdrop_path": "/8GXkzHTvuj3ftethkrqW330LJKz.jpg",
-      "genre_ids": [10402],
+      "genre_ids": [
+        10402
+      ],
       "id": 568300,
       "original_language": "ko",
       "original_title": "러브 유어셀프 인 서울",
@@ -1000,12 +1193,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 51,
     "fields": {
       "adult": false,
       "backdrop_path": "/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
-      "genre_ids": [35, 18],
+      "genre_ids": [
+        35,
+        18
+      ],
       "id": 3082,
       "original_language": "en",
       "original_title": "Modern Times",
@@ -1020,12 +1216,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 52,
     "fields": {
       "adult": false,
       "backdrop_path": "/27ZkYMWynuK2qiDP6awc3MsCaOs.jpg",
-      "genre_ids": [10749, 18],
+      "genre_ids": [
+        10749,
+        18
+      ],
       "id": 527641,
       "original_language": "en",
       "original_title": "Five Feet Apart",
@@ -1040,12 +1239,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 53,
     "fields": {
       "adult": false,
       "backdrop_path": "/wqgZSvgoctaadgwUdPYVsksivxn.jpg",
-      "genre_ids": [35, 18, 10749],
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
       "id": 20334,
       "original_language": "en",
       "original_title": "The Shop Around the Corner",
@@ -1060,12 +1263,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 54,
     "fields": {
       "adult": false,
       "backdrop_path": "/nbAbAk80aWCpOS5kOPYJ1L9kE1R.jpg",
-      "genre_ids": [10402, 18, 10749],
+      "genre_ids": [
+        10402,
+        18,
+        10749
+      ],
       "id": 630566,
       "original_language": "en",
       "original_title": "Clouds",
@@ -1080,12 +1287,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 55,
     "fields": {
       "adult": false,
       "backdrop_path": "/6C1U0cKK5zGjyUSwNc5GLSVCr7Y.jpg",
-      "genre_ids": [18, 10752],
+      "genre_ids": [
+        18,
+        10752
+      ],
       "id": 25237,
       "original_language": "ru",
       "original_title": "Иди и смотри",
@@ -1100,12 +1310,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 56,
     "fields": {
       "adult": false,
       "backdrop_path": "/h31SOVlekuHXsMWVGxI8nPPfY82.jpg",
-      "genre_ids": [18, 37],
+      "genre_ids": [
+        18,
+        37
+      ],
       "id": 335,
       "original_language": "it",
       "original_title": "C'era una volta il West",
@@ -1120,12 +1333,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 57,
     "fields": {
       "adult": false,
       "backdrop_path": "/88J6waYVTta8Qz3iX3qUeWNA5d5.jpg",
-      "genre_ids": [18, 10749],
+      "genre_ids": [
+        18,
+        10749
+      ],
       "id": 447362,
       "original_language": "en",
       "original_title": "Life in a Year",
@@ -1140,12 +1356,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 58,
     "fields": {
       "adult": false,
       "backdrop_path": "/oOM2JzhVBjWyZFHW2iBQQ8A3znY.jpg",
-      "genre_ids": [18, 53],
+      "genre_ids": [
+        18,
+        53
+      ],
       "id": 16672,
       "original_language": "ja",
       "original_title": "砂の女",
@@ -1160,12 +1379,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 59,
     "fields": {
       "adult": false,
       "backdrop_path": "/yHtB4KHNigx3ZoxDvQbW2SOXGfq.jpg",
-      "genre_ids": [16, 10751, 12, 14],
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        14
+      ],
       "id": 441130,
       "original_language": "en",
       "original_title": "Wolfwalkers",
@@ -1180,12 +1404,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 60,
     "fields": {
       "adult": false,
       "backdrop_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
-      "genre_ids": [28, 18],
+      "genre_ids": [
+        28,
+        18
+      ],
       "id": 361743,
       "original_language": "en",
       "original_title": "Top Gun: Maverick",
@@ -1200,12 +1427,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 61,
     "fields": {
       "adult": false,
       "backdrop_path": "/tqj7NKj11keFuLzPsBDMUq2dOUO.jpg",
-      "genre_ids": [12, 14, 28],
+      "genre_ids": [
+        12,
+        14,
+        28
+      ],
       "id": 120,
       "original_language": "en",
       "original_title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -1220,12 +1451,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 62,
     "fields": {
       "adult": false,
       "backdrop_path": "/alQqTpmEkxSLgajfEYTsTH6nAKB.jpg",
-      "genre_ids": [35, 18, 14],
+      "genre_ids": [
+        35,
+        18,
+        14
+      ],
       "id": 40096,
       "original_language": "pt",
       "original_title": "O Auto da Compadecida",
@@ -1240,12 +1475,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 63,
     "fields": {
       "adult": false,
       "backdrop_path": "/aJCtkxLLzkk1pECehVjKHA2lBgw.jpg",
-      "genre_ids": [12, 28, 878],
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
       "id": 1891,
       "original_language": "en",
       "original_title": "The Empire Strikes Back",
@@ -1260,12 +1499,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 64,
     "fields": {
       "adult": false,
       "backdrop_path": "/qknxyRgP6UTmwJ4B9tDAmzHMq7u.jpg",
-      "genre_ids": [10749, 16, 14],
+      "genre_ids": [
+        10749,
+        16,
+        14
+      ],
       "id": 92321,
       "original_language": "ja",
       "original_title": "蛍火の杜へ",
@@ -1280,12 +1523,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 65,
     "fields": {
       "adult": false,
       "backdrop_path": "/dVr11o9or7AS8AMPfwjSpEU83iU.jpg",
-      "genre_ids": [18, 10752],
+      "genre_ids": [
+        18,
+        10752
+      ],
       "id": 423,
       "original_language": "en",
       "original_title": "The Pianist",
@@ -1300,12 +1546,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 66,
     "fields": {
       "adult": false,
       "backdrop_path": "/aQ7444JX7gefPhGJTlvilj3zG2S.jpg",
-      "genre_ids": [10402],
+      "genre_ids": [
+        10402
+      ],
       "id": 553512,
       "original_language": "ko",
       "original_title": "번 더 스테이지: 더 무비",
@@ -1320,12 +1568,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 67,
     "fields": {
       "adult": false,
       "backdrop_path": "/kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg",
-      "genre_ids": [12, 14, 28],
+      "genre_ids": [
+        12,
+        14,
+        28
+      ],
       "id": 121,
       "original_language": "en",
       "original_title": "The Lord of the Rings: The Two Towers",
@@ -1340,12 +1592,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 68,
     "fields": {
       "adult": false,
       "backdrop_path": "/5h8VtV4oh2qkO8Iqz7gypIYJPAr.jpg",
-      "genre_ids": [18, 10402],
+      "genre_ids": [
+        18,
+        10402
+      ],
       "id": 244786,
       "original_language": "en",
       "original_title": "Whiplash",
@@ -1360,12 +1615,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 69,
     "fields": {
       "adult": false,
       "backdrop_path": "/AfyuI3glMCBDFmNPj9PY6DwbgGp.jpg",
-      "genre_ids": [16, 878, 28],
+      "genre_ids": [
+        16,
+        878,
+        28
+      ],
       "id": 18491,
       "original_language": "ja",
       "original_title": "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
@@ -1380,12 +1639,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 70,
     "fields": {
       "adult": false,
       "backdrop_path": "/hh28CTWLdxTXA5yJgefZ6gUnFDo.jpg",
-      "genre_ids": [80, 9648, 53],
+      "genre_ids": [
+        80,
+        9648,
+        53
+      ],
       "id": 807,
       "original_language": "en",
       "original_title": "Se7en",
@@ -1400,12 +1663,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 71,
     "fields": {
       "adult": false,
       "backdrop_path": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
-      "genre_ids": [28, 878, 12],
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
       "id": 27205,
       "original_language": "en",
       "original_title": "Inception",
@@ -1420,12 +1687,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 72,
     "fields": {
       "adult": false,
       "backdrop_path": "/p47ihFj4A7EpBjmPHdTj4ipyq1S.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 599,
       "original_language": "en",
       "original_title": "Sunset Boulevard",
@@ -1440,12 +1709,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 73,
     "fields": {
       "adult": false,
       "backdrop_path": "/zZvtZZXRnZ4Tdcs0QEWaZZcIWy8.jpg",
-      "genre_ids": [53, 9648],
+      "genre_ids": [
+        53,
+        9648
+      ],
       "id": 567,
       "original_language": "en",
       "original_title": "Rear Window",
@@ -1460,12 +1732,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 74,
     "fields": {
       "adult": false,
       "backdrop_path": "/i1GT0e6Crg6UezT3ibXnMS3pBAd.jpg",
-      "genre_ids": [16, 18, 10749],
+      "genre_ids": [
+        16,
+        18,
+        10749
+      ],
       "id": 652837,
       "original_language": "ja",
       "original_title": "ジョゼと虎と魚たち",
@@ -1480,12 +1756,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 75,
     "fields": {
       "adult": false,
       "backdrop_path": "/l5K9elugftlcyIHHm4nylvsn26X.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 255709,
       "original_language": "ko",
       "original_title": "소원",
@@ -1500,12 +1778,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 76,
     "fields": {
       "adult": false,
       "backdrop_path": "/9LSsSPbP715XT9B7acIZzantPyX.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 73,
       "original_language": "en",
       "original_title": "American History X",
@@ -1520,12 +1800,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 77,
     "fields": {
       "adult": false,
       "backdrop_path": "/5qtOVAcBFogwktkseoZSfZVq6bx.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 3782,
       "original_language": "ja",
       "original_title": "生きる",
@@ -1540,12 +1822,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 78,
     "fields": {
       "adult": false,
       "backdrop_path": "/ySaK6hpbCc2OE13ac7ovhgWwR5u.jpg",
-      "genre_ids": [10402],
+      "genre_ids": [
+        10402
+      ],
       "id": 568332,
       "original_language": "en",
       "original_title": "Taylor Swift: Reputation Stadium Tour",
@@ -1560,12 +1844,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 79,
     "fields": {
       "adult": false,
       "backdrop_path": "/8AMKZODrCvWe2sCy9Ts7VsLcKd6.jpg",
-      "genre_ids": [35, 10752],
+      "genre_ids": [
+        35,
+        10752
+      ],
       "id": 914,
       "original_language": "en",
       "original_title": "The Great Dictator",
@@ -1580,12 +1867,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 80,
     "fields": {
       "adult": false,
       "backdrop_path": "/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
-      "genre_ids": [80, 18, 53],
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
       "id": 274,
       "original_language": "en",
       "original_title": "The Silence of the Lambs",
@@ -1600,12 +1891,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 81,
     "fields": {
       "adult": false,
       "backdrop_path": "/w2uGvCpMtvRqZg6waC1hvLyZoJa.jpg",
-      "genre_ids": [10749],
+      "genre_ids": [
+        10749
+      ],
       "id": 696374,
       "original_language": "en",
       "original_title": "Gabriel's Inferno",
@@ -1620,12 +1913,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 82,
     "fields": {
       "adult": false,
       "backdrop_path": "/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
-      "genre_ids": [28, 18],
+      "genre_ids": [
+        28,
+        18
+      ],
       "id": 346,
       "original_language": "ja",
       "original_title": "七人の侍",
@@ -1640,12 +1936,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 83,
     "fields": {
       "adult": false,
       "backdrop_path": "/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
-      "genre_ids": [18, 10749],
+      "genre_ids": [
+        18,
+        10749
+      ],
       "id": 11216,
       "original_language": "it",
       "original_title": "Nuovo Cinema Paradiso",
@@ -1660,12 +1959,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 84,
     "fields": {
       "adult": false,
       "backdrop_path": "/gavyCu1UaTaTNPsVaGXT6pe5u24.jpg",
-      "genre_ids": [35, 18],
+      "genre_ids": [
+        35,
+        18
+      ],
       "id": 637,
       "original_language": "it",
       "original_title": "La vita è bella",
@@ -1680,12 +1982,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 85,
     "fields": {
       "adult": false,
       "backdrop_path": "/gwj4R8Uy1GwejKqfofREKI9Jh7L.jpg",
-      "genre_ids": [16, 18, 10752],
+      "genre_ids": [
+        16,
+        18,
+        10752
+      ],
       "id": 12477,
       "original_language": "ja",
       "original_title": "火垂るの墓",
@@ -1700,12 +2006,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 86,
     "fields": {
       "adult": false,
       "backdrop_path": "/wxoxxA9oINGVI4vJWYnDId6oRMv.jpg",
-      "genre_ids": [18, 80],
+      "genre_ids": [
+        18,
+        80
+      ],
       "id": 311,
       "original_language": "en",
       "original_title": "Once Upon a Time in America",
@@ -1720,12 +2029,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 87,
     "fields": {
       "adult": false,
       "backdrop_path": "/uif5fUshJrXyyDzfpzp1DLw3N0S.jpg",
-      "genre_ids": [27, 18, 53],
+      "genre_ids": [
+        27,
+        18,
+        53
+      ],
       "id": 539,
       "original_language": "en",
       "original_title": "Psycho",
@@ -1740,12 +2053,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 88,
     "fields": {
       "adult": false,
       "backdrop_path": "/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg",
-      "genre_ids": [10749],
+      "genre_ids": [
+        10749
+      ],
       "id": 724089,
       "original_language": "en",
       "original_title": "Gabriel's Inferno: Part II",
@@ -1760,12 +2075,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 89,
     "fields": {
       "adult": false,
       "backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
-      "genre_ids": [18, 53, 35],
+      "genre_ids": [
+        18,
+        53,
+        35
+      ],
       "id": 550,
       "original_language": "en",
       "original_title": "Fight Club",
@@ -1780,12 +2099,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 90,
     "fields": {
       "adult": false,
       "backdrop_path": "/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg",
-      "genre_ids": [10751, 18],
+      "genre_ids": [
+        10751,
+        18
+      ],
       "id": 667257,
       "original_language": "es",
       "original_title": "Cosas imposibles",
@@ -1800,12 +2122,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 91,
     "fields": {
       "adult": false,
       "backdrop_path": "/jBIMZ0AlUYuFNsKbd4L6FojWMoy.jpg",
-      "genre_ids": [16, 35, 10749],
+      "genre_ids": [
+        16,
+        35,
+        10749
+      ],
       "id": 820067,
       "original_language": "ja",
       "original_title": "映画 五等分の花嫁",
@@ -1820,12 +2146,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 92,
     "fields": {
       "adult": false,
       "backdrop_path": "/5p3aTxtUtZHCHwYsuycutmxIhND.jpg",
-      "genre_ids": [18, 80],
+      "genre_ids": [
+        18,
+        80
+      ],
       "id": 598,
       "original_language": "pt",
       "original_title": "Cidade de Deus",
@@ -1840,12 +2169,14 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 93,
     "fields": {
       "adult": false,
       "backdrop_path": "/qUq3QTr2KLvGIcN0GaaaYx9bbyH.jpg",
-      "genre_ids": [18],
+      "genre_ids": [
+        18
+      ],
       "id": 510,
       "original_language": "en",
       "original_title": "One Flew Over the Cuckoo's Nest",
@@ -1860,12 +2191,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 94,
     "fields": {
       "adult": false,
       "backdrop_path": "/fQq1FWp1rC89xDrRMuyFJdFUdMd.jpg",
-      "genre_ids": [10749, 35],
+      "genre_ids": [
+        10749,
+        35
+      ],
       "id": 761053,
       "original_language": "en",
       "original_title": "Gabriel's Inferno: Part III",
@@ -1880,12 +2214,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 95,
     "fields": {
       "adult": false,
       "backdrop_path": "/aVFx1VtlOxR3v0ADEatalXOvwbu.jpg",
-      "genre_ids": [16, 14, 28],
+      "genre_ids": [
+        16,
+        14,
+        28
+      ],
       "id": 620249,
       "original_language": "zh",
       "original_title": "罗小黑战记",
@@ -1900,12 +2238,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 96,
     "fields": {
       "adult": false,
       "backdrop_path": "/nC3IjYhUgZWgfKfFX0ygMigFwgc.jpg",
-      "genre_ids": [28, 18, 36],
+      "genre_ids": [
+        28,
+        18,
+        36
+      ],
       "id": 14537,
       "original_language": "ja",
       "original_title": "切腹",
@@ -1920,12 +2262,17 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 97,
     "fields": {
       "adult": false,
       "backdrop_path": "/qGQf2OHIkoh89K8XeKQzhxczf96.jpg",
-      "genre_ids": [28, 12, 16, 878],
+      "genre_ids": [
+        28,
+        12,
+        16,
+        878
+      ],
       "id": 324857,
       "original_language": "en",
       "original_title": "Spider-Man: Into the Spider-Verse",
@@ -1940,12 +2287,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 98,
     "fields": {
       "adult": false,
       "backdrop_path": "/nv5wwZou159v5OC61i4ElR7OqyY.jpg",
-      "genre_ids": [14, 16, 12],
+      "genre_ids": [
+        14,
+        16,
+        12
+      ],
       "id": 4935,
       "original_language": "ja",
       "original_title": "ハウルの動く城",
@@ -1960,12 +2311,16 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 99,
     "fields": {
       "adult": false,
       "backdrop_path": "/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
-      "genre_ids": [12, 18, 878],
+      "genre_ids": [
+        12,
+        18,
+        878
+      ],
       "id": 157336,
       "original_language": "en",
       "original_title": "Interstellar",
@@ -1980,12 +2335,15 @@
     }
   },
   {
-    "model": "movies.movie",
+    "model": "movies.Movie",
     "pk": 100,
     "fields": {
       "adult": false,
       "backdrop_path": "/q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg",
-      "genre_ids": [16, 18],
+      "genre_ids": [
+        16,
+        18
+      ],
       "id": 378064,
       "original_language": "ja",
       "original_title": "映画 聲の形",
