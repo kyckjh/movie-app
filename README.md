@@ -30,15 +30,17 @@ Yechan Kang, Sanghyuk Lee
 
 Project is created with:
 
-- Django ?-?
+- Django 3.2.18
 
-- Bootstrap 3.?
+- Bootstrap 5.3
 
 - Python 3.6
 
-- Vue.js ?
+- Vue.js 2
 
-- JavaScript ?
+- JavaScript ES6+
+
+### 
 
 ### Features
 
@@ -63,6 +65,18 @@ Project is created with:
 ## Launch
 
 실행화면
+
+## Tools
+
+- boardmix.com
+
+- MySQL Workbench
+
+- VSCode
+
+- Git bash
+
+- Postman
 
 ---
 
