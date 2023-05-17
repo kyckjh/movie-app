@@ -12,11 +12,9 @@ summary
 
 - third
 
-
-
 ## Members
 
-Yechan Kang, Sanghyeon Lee
+Yechan Kang, Sanghyuk Lee
 
 ## Overview
 
@@ -27,8 +25,6 @@ Yechan Kang, Sanghyeon Lee
 ## Project Timetable
 
 ![Timeline - export.png](README_assets/5bf521bee19c065254c7eeccf45d798d4df47cc4.png)
-
-
 
 ## Technologies
 
@@ -62,11 +58,7 @@ Project is created with:
 
 ## Database Design
 
-
-
 ![database design.png](README_assets/b8256e76b57c5223608f8e9627046b9393c35365.png)
-
-
 
 ## Launch
 
