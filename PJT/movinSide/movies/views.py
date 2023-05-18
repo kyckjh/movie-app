@@ -8,7 +8,8 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Actor, Movie, Review
 from .serializers import (ActorDetailSerializer, ActorListSerializer,
                           MovieDetailSerializer, MovieListSerializer,
-                          ReviewDetailSerializer, ReviewListSerializer)
+                          ReviewDetailSerializer, ReviewListSerializer,
+                          MoviewCommentSerializer, ReviewCommentSerializer)
 
 # Create your views here.
 
@@ -64,4 +65,22 @@ def review_create(request, pk):
     serializer = ReviewDetailSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(movie=movie)
+        return Response(serializer.data)
+    
+@permission_classes([IsAuthenticated])
+@api_view(["POST"])
+def movie_comment_create(request, pk):
+    movie = get_object_or_404(Movie, pk=pk)
+    serializer = MoviewCommentSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(movie=movie)
+        return Response(serializer.data)
+    
+@permission_classes([IsAuthenticated])
+@api_view(["POST"])
+def review_comment_create(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    serializer = ReviewCommentSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(review=review)
         return Response(serializer.data)

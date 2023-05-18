@@ -36,6 +36,11 @@ class Review(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class MovieComment(models.Model):
-    cotent = models.CharField(max_length=100)
+    content = models.CharField(max_length=100)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+class ReviewComment(models.Model):
+    content = models.CharField(max_length=100)
+    Review = models.ForeignKey(Review, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
