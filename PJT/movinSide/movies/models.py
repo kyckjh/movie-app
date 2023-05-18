@@ -42,5 +42,5 @@ class MovieComment(models.Model):
 
 class ReviewComment(models.Model):
     content = models.CharField(max_length=100)
-    Review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

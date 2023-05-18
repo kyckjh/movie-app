@@ -29,10 +29,11 @@ class MovieDetailSerializer(MovieListSerializer):
         fields = '__all__'
 
 
+        
 class MovieTitleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ("title",)
+        fields = ("title", )
 
 class ActorDetailSerializer(ActorListSerializer):
     movies = MovieTitleSerializer(many=True, read_only=True)
@@ -49,11 +50,11 @@ class ReviewDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('movie',)
 
-class MoviewCommentSerializer(serializers.ModelSerializer):
+class MovieCommentSerializer(serializers.ModelSerializer):
     movie = MovieTitleSerializer(read_only=True)
     class Meta:
         model = MovieComment
-        fields = ("content", "user",)
+        fields = ("content", "user", "movie",)
 
 class ReviewCommentSerializer(serializers.ModelSerializer):
     review = ReviewDetailSerializer(read_only=True)

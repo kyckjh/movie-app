@@ -14,8 +14,7 @@ urlpatterns = [
     path('reviews/create/<int:movie_pk>/', views.review_create),
 
     # comment
-    path('movies/<int:pk>/comments/', views.movie_comment_create),
-    path('reviews/<int:pk>/comments/', views.review_comment_create),
+    path('movies/<int:movie_pk>/comment/', views.movie_comment_create),
+    path('reviews/<int:review_pk>/comment/', views.review_comment_create),
     
-
 ]
