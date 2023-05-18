@@ -16,9 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
-from rest_framework.authtoken import views
-
-from rest_framework.routers import DefaultRouter
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,7 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('movies.urls')),
-    
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('accounts/', include('dj_rest_auth.urls')),
+    path('accounts/signup/', include('dj_rest_auth.registration.urls'))
+
     # path('api/v2/', include('accounts.urls')),
     # path('api/v3/', include('community.urls')),
 
