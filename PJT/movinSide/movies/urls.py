@@ -7,11 +7,15 @@ urlpatterns = [
     path('actors/', views.actor_list),
     path('movies/<int:pk>/', views.movie_detail),
     path('actors/<int:pk>/', views.actor_detail),
+    path('movies/<int:movie_pk>/like/', views.movie_likes),
+
 
     # review
     path('movies/<int:pk>/reviews/', views.review_list),
     path('reviews/<int:pk>/', views.review_detail),
     path('reviews/create/<int:movie_pk>/', views.review_create),
+    path('reviews/<int:review_pk>/like/', views.review_likes),
+
 
     # comment
     path('movies/<int:movie_pk>/comment/', views.movie_comment_create),
