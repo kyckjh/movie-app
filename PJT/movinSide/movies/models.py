@@ -5,6 +5,7 @@ from django.conf import settings
 # Create your models here.
 class Actor(models.Model):
     name = models.CharField(max_length=100)
+    character = models.CharField(max_length=100)
 
 class Genre(models.Model):
     name = models.CharField(max_length=50)
@@ -24,7 +25,8 @@ class Movie(models.Model):
     video = models.BooleanField()
     vote_average = models.FloatField()
     vote_count = models.IntegerField()
-    #actors = models.ManyToManyField(Actor, related_name='movies')
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
+    actor_ids = models.ManyToManyField(Actor, related_name='movies')
 
 class Review(models.Model):
     title = models.CharField(max_length=100)

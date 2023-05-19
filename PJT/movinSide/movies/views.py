@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
-from .models import Actor, Movie, Review, MovieComment
+from .models import Actor, Movie, Review, MovieComment, ReviewComment
 from .serializers import (ActorDetailSerializer, ActorListSerializer,
                           MovieDetailSerializer, MovieListSerializer,
                           ReviewDetailSerializer, ReviewListSerializer,
@@ -78,6 +78,7 @@ def movie_comment_create(request, movie_pk):
         serializer.save(movie=movie)
         return Response(serializer.data)
     
+    
 @permission_classes([IsAuthenticated])
 @api_view(["POST"])
 def review_comment_create(request, review_pk):
@@ -86,3 +87,20 @@ def review_comment_create(request, review_pk):
     if serializer.is_valid(raise_exception=True):
         serializer.save(review=review)
         return Response(serializer.data)
+
+@permission_classes([IsAuthenticated])
+@api_view(["DELETE"])
+def review_comment_delete(request, comment_pk):
+    review_comment = get_object_or_404(ReviewComment, pk=comment_pk)
+    if request.method == "DELETE":
+        review_comment.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@permission_classes([IsAuthenticated])
+@api_view(["DELETE"])
+def movie_comment_delete(request, comment_pk):
+    movie_comment = get_object_or_404(ReviewComment, pk=comment_pk)
+    if request.method == "DELETE":
+        movie_comment.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
