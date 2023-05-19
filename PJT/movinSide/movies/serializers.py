@@ -12,7 +12,7 @@ class MovieListSerializer(serializers.ModelSerializer):
 class ActorListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actor
-        fields = ("id", "name", "charater")
+        fields = ("id", "name", "character")
 
 # 리뷰 리스트
 class ReviewListSerializer(serializers.ModelSerializer):
@@ -30,15 +30,9 @@ class MovieDetailSerializer(MovieListSerializer):
         fields = '__all__'
 
 
-# MovieListSerializer와 중복 되는 내용. 삭제 검토
-class MovieTitleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Movie
-        fields = ("title", )
-
 # 배우 상세 조회
 class ActorDetailSerializer(ActorListSerializer):
-    movies = MovieTitleSerializer(many=True, read_only=True)
+    movies = MovieListSerializer(many=True, read_only=True)
 
     class Meta(ActorListSerializer.Meta):
         fields = ActorListSerializer.Meta.fields + (
@@ -47,7 +41,7 @@ class ActorDetailSerializer(ActorListSerializer):
 
 # 리뷰 상세 조회
 class ReviewDetailSerializer(serializers.ModelSerializer):
-    movie = MovieTitleSerializer(read_only=True)
+    movie = MovieListSerializer(read_only=True)
     class Meta:
         model = Review
         fields = '__all__'
@@ -55,7 +49,7 @@ class ReviewDetailSerializer(serializers.ModelSerializer):
 
 # 영화 댓글
 class MovieCommentSerializer(serializers.ModelSerializer):
-    movie = MovieTitleSerializer(read_only=True)
+    movie = MovieListSerializer(read_only=True)
     class Meta:
         model = MovieComment
         fields = ("content", "user", "movie",)
