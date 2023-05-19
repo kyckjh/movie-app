@@ -12,7 +12,7 @@ class MovieListSerializer(serializers.ModelSerializer):
 class ActorListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actor
-        fields = ("id", "name")
+        fields = ("id", "name", "charater")
 
 # 리뷰 리스트
 class ReviewListSerializer(serializers.ModelSerializer):

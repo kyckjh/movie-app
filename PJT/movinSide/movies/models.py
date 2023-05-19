@@ -6,6 +6,7 @@ from django.conf import settings
 class Actor(models.Model):
     name = models.CharField(max_length=100)
     character = models.CharField(max_length=100)
+    image_path = models.TextField(null=True)
 
 class Genre(models.Model):
     name = models.CharField(max_length=50)

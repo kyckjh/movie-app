@@ -5,4 +5,4 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     
     followings = models.ManyToManyField('self', symmetrical=False, related_name="followers")
-    # profile_img = models.TextField(blank=True)
+    profile_img = models.TextField(blank=True)
