@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # app
     'movies',
     'accounts',
+    'community',
 
     # DRF, AUTH
     'rest_framework',
