@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from .models import Review, ReviewComment
 from .serializers import ReviewCommentSerializer, ReviewDetailSerializer, ReviewListSerializer
+from movies.models import Movie
 
 # Create your views here.
 @api_view(['GET'])

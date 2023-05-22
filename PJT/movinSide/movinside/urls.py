@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('movies.urls')),
 
-    path('communuty', include('community.urls')),
+    path('community/', include('community.urls')),
 
     path('accounts/', include('dj_rest_auth.urls')),
     path('accounts/', include('accounts.urls')),
