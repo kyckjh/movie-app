@@ -25,31 +25,53 @@ def review_create(request, movie_pk):
         serializer.save(movie=movie)
         return Response(serializer.data)
 
-
+# 리뷰 상세 조회, 업데이트, 삭제    
 @api_view(['GET', 'PUT', 'DELETE'])
 def review_detail(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    if request.method == "GET":
+
+    def review_detail():
         serializer = ReviewDetailSerializer(review)
         return Response(serializer.data)
+
+    def review_update():
+        if request.user == review.user:
+            serializer = ReviewDetailSerializer(review, data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                return Response(serializer.data)
+    def review_delete():
+        if request.user == review.user:
+            review.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
+    if request.method == "GET":
+        return review_detail()
+    if request.method == "PUT":
+        return review_update()
     elif request.method == "DELETE":
-        review.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-    elif request.method == "PUT":
-        serializer = ReviewDetailSerializer(review, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
+        return review_delete()
 
 # 리뷰 댓글 만들기
 @permission_classes([IsAuthenticated])
 @api_view(["POST"])
-def review_comment_create(request, review_pk):
-    review = get_object_or_404(Review, pk=review_pk)
-    serializer = ReviewCommentSerializer(data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save(review=review)
+def review_comment_list_or_create(request, review_pk):
+    def comment_list():
+        comments = get_list_or_404(ReviewComment, review=review_pk)[:-1]
+        serializer = ReviewCommentSerializer(comments, many=True)
         return Response(serializer.data)
+    def create_comment():
+        review = get_object_or_404(Review, pk=review_pk)
+        serializer = ReviewCommentSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(review=review, user=request.user)
+            comments = review.comments.all()
+            serializer = ReviewCommentSerializer(comments, many=True)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+    if request.method == 'GET':
+        return comment_list()
+    elif request.method == "POST":
+        return create_comment()
 
 # 리뷰 댓글 삭제
 @permission_classes([IsAuthenticated])
@@ -57,8 +79,9 @@ def review_comment_create(request, review_pk):
 def review_comment_delete(request, comment_pk):
     review_comment = get_object_or_404(ReviewComment, pk=comment_pk)
     if request.method == "DELETE":
-        review_comment.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        if request.user == review_comment.user:
+            review_comment.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
 
 # 리뷰 좋아요
 @api_view(['POST'])

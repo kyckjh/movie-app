@@ -13,7 +13,6 @@ class ReviewListSerializer(serializers.ModelSerializer):
         fields = ("title", "content", 'like_users', 'comments', 'created_at', 'updated_at', )
 
 # 리뷰 상세 조회
-
 class ReviewDetailSerializer(serializers.ModelSerializer):
     # movie = movies.serializers.MovieListSerializer(read_only=True)
     # movie = MovieListSerializer(read_only=True)

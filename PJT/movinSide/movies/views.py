@@ -8,7 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Actor, Movie, MovieComment
 from .serializers import (ActorDetailSerializer, ActorListSerializer,
                           MovieDetailSerializer, MovieListSerializer,
-                          MovieCommentSerializer,)
+                          MovieCommentSerializer, MovieCommentListSerializer)
 
 # Create your views here.
 
@@ -24,7 +24,6 @@ def actor_list(request):
     serializer = ActorListSerializer(actors, many=True)
     return Response(serializer.data)
 
-
 @api_view(['GET'])
 def movie_detail(request, pk):
     movie = get_object_or_404(Movie, pk=pk)
@@ -37,15 +36,25 @@ def actor_detail(request, pk):
     serializer = ActorDetailSerializer(actor)
     return Response(serializer.data)
     
-# 영화 댓글 만들기
+# 영화 댓글 조회 및 만들기
 @permission_classes([IsAuthenticated])
 @api_view(["POST"])
-def movie_comment_create(request, movie_pk):
-    movie = get_object_or_404(Movie, pk=movie_pk)
-    serializer = MovieCommentSerializer(data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save(movie=movie)
+def movie_comment_list_or_create(request, movie_pk):
+    def comment_list():
+        comments = get_list_or_404(MovieComment, pk=movie_pk)[::-1]
+        serializer = MovieCommentListSerializer(comments, many=True)
         return Response(serializer.data)
+    
+    def create_comment():
+        movie = get_object_or_404(Movie, pk=movie_pk)
+        serializer = MovieCommentSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(movie=movie)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+    if request.method == "GET":
+        return comment_list()
+    elif request.method == "POST":
+        return create_comment()
     
 # 영화 댓글 삭제
 @permission_classes([IsAuthenticated])

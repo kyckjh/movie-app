@@ -41,3 +41,7 @@ class MovieCommentSerializer(serializers.ModelSerializer):
         model = MovieComment
         fields = ("content", "user", "movie",)
 
+class MovieCommentListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MovieComment
+        fields = ('id', 'content', 'user')
