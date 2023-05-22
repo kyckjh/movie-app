@@ -84,6 +84,7 @@ def review_comment_delete(request, comment_pk):
             return Response(status=status.HTTP_204_NO_CONTENT)
 
 # 리뷰 좋아요
+@permission_classes([IsAuthenticated])
 @api_view(['POST'])
 def review_likes(request, review_pk):
     review = get_object_or_404(Review, pk=review_pk)
