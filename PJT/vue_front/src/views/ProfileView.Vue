@@ -1,15 +1,33 @@
 <template>
-  
+  <div>
+    <Profile-item></Profile-item>
+    <profile-movie-list :likeMovies="profile.like_movies"></profile-movie-list>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'ProfileUpdateView',
-    components: {},
-    computed: {},
-    methods: {},
-    created() {},
-  }</script>
+import ProfileItem from '../components/profile/ProfileItem.vue'
+import ProfileMovieList from '../components/profile/ProfileMovieList.vue'
+import { mapGetters, mapActions} from 'vuex'
+
+export default {
+  name: 'ProfileView',
+  components: {
+    ProfileItem,
+    ProfileMovieList,
+  },
+  computed: {
+    ...mapGetters(['profile'])
+  },
+  methods: {
+    ...mapActions(['fetchProfile'])
+  },
+  created() {
+    const payload = { username: this.$route.params.username}
+    this.fetchProfile(payload)
+  },
+}
+</script>
 
 <style>
 

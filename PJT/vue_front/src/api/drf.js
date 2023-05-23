@@ -1,4 +1,4 @@
-const HOST = 'http://localhost:8000/'
+const HOST = 'http://localhost:8080/'
 
 const ACCOUNTS = 'accounts/'
 const REVIEWS = 'review/'

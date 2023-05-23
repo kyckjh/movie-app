@@ -67,7 +67,7 @@ export default {
                 const token = res.data.key
                 dispatch('saveToken', token)
                 dispatch('fetchCurrentUser')
-                router.push({ name: 'MainView'})
+                router.push({ name: 'MainView' })
             })
             .catch(err => {
                 console.error(err.response.data)
@@ -114,10 +114,14 @@ export default {
                     method: 'get',
                     headers: getters.authHeader,
                 })
-                .then(res => commit('SET_CURRENT_USER', res.data))
+                .then(res => commit('SET_CURRENT_USER', res.data),
+                console.log("패치커런트유저 어카운츠스테이트")
+                )
                 .catch(err => {
                     if (err.response.status === 401) {
                         dispatch('removeToken')
+                        console.log("패치커런트유저 어카운츠스테이트")
+
                         router.push({ name: 'login'})
                     }
                 })

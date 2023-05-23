@@ -14,7 +14,7 @@ export default {
   },
 
   getters: {
-    currentUser: state => state.currentUser,
+    CurrentUser: state => state.currentUser,
     articles: state => state.articles,
     article: state => state.article,
     isAuthor: (state, getters) => {

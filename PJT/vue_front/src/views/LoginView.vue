@@ -31,7 +31,7 @@
             <div>
               <div class="separator" style="width:100%; max-width: 328px; margin:auto; height: 1px; background-image: url(https://appleid.cdn-apple.com/appleauth/static/bin/cb1633718600/dist/assets/HR_gradient_dark.png); background-size: cover;"></div>
               <div class="text-center sign_up">
-                
+                회원가입 하시겠습니까?
                 <router-link to="/signup" class="nav-link" active-class="active">Sign Up</router-link>
               </div>
             </div>
