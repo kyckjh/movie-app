@@ -1,7 +1,8 @@
 // import router from '@/router'
 // import axios from 'axios'
 // import drf from '@/api/drf'
-// import { _ } from 'core-js'
+// import _ from 'lodash'
+// // import { _ } from 'core-js'
 
 // export default {
 //     state: {
@@ -34,7 +35,103 @@
 
 //     actions: {
 //         followProfile({ commit, getters}, username) {
+//             axios({
+//                 url: drf.accounts.follow(username),
+//                 method: 'post',
+//                 headers: getters.authHeader,
+//             })
+//             .then(res => {
+//                 console.log(res)
+//                 commit('SET_PROFILE', res.data)
+//             })
+//             .catch(err => {
+//                 console.error(err.response)
+//             })
+//         },
+//         saveToken({ commit }, token) {
+//             commit('SET_TOKEN', token)
+//             localStorage.setItem('token', token)
+//         },
 
+//         removeToken({ commit }) {
+//             commit('SET_TOKEN', '')
+//             localStorage.setItem('token', '')
+//         },
+//         login({ commit, dispatch }, credentials) {
+//             axios({
+//                 url: drf.accounts.login(),
+//                 method: 'post',
+//                 data: credentials
+//             })
+//             .then(res => {
+//                 const token = res.data.key
+//                 dispatch('saveToken', token)
+//                 dispatch('fetchCurrentUser')
+//                 router.push({ name: 'MainView'})
+//             })
+//             .catch(err => {
+//                 console.error(err.response.data)
+//                 commit('SET_AUTH_ERROR', err.response.data)
+//             })
+//         },
+//         signup({ commit, dispatch }, credentials) {
+//             axios({
+//                 url: drf.accounts.signup(),
+//                 method: 'post',
+//                 data: credentials
+//             })
+//             .then(res => {
+//                 const token = res.data.key
+//                 dispatch('saveToken', token)
+//                 dispatch('fetchCurrentUser')
+//                 router.push({ name: 'MainView' })
+//             })
+//             .catch(err => {
+//                 console.error(err.response.data)
+//                 commit('SET_AUTH_ERROR', err.response.data)
+//             })
+//         },
+
+//         logout({ getters, dispatch }) {
+//             axios({
+//                 url: drf.accounts.logout(),
+//                 method: 'post',
+//                 headers: getters.authHeader,
+//             })
+//             .then(() => {
+//                 dispatch('removeToken')
+//                 alert('Log out 되었습니다.')
+//                 router.push({ name: 'login' })
+//             })
+//             .catch(err => {
+//                 console.error(err.response)
+//             })
+//         },
+//         fetchCurrentUser({ commit, getters, dispatch }) {
+//             if (getters.isLoggedIn) {
+//                 axios({
+//                     url: drf.accounts.currentUserInfo(),
+//                     method: 'get',
+//                     headers: getters.authHeader,
+//                 })
+//                 .then(res => commit('SET_CURRENT_USER', res.data))
+//                 .catch(err => {
+//                     if (err.response.status === 401) {
+//                         dispatch('removeToken')
+//                         router.push({ name: 'login'})
+//                     }
+//                 })
+//             }
+//         },
+//         fetchProfile({ commit, getters }, { username }) {
+//             axios({
+//                 url: drf.accounts.profile(username),
+//                 method: 'get',
+//                 headers: getters.authHeader,
+//             })
+//             .then(res => {
+//                 commit('SET_PROFILE', res.data)
+//             })
 //         }
 //     }
 
