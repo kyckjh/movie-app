@@ -20,13 +20,29 @@
 </template>
 
 <script>
+import {mapActions, mapGetters } from 'vuex'
+
+
 export default {
   name: 'SignUpView',
-  data() {
+  components: {
 
   },
+  data() {
+    return {
+      credentials: {
+        username: '',
+        email: '',
+        password1: '',
+        password2: '',
+      }
+    }
+  },
+  computed: {
+    ...mapGetters(['authError'])
+  },
   methods: {
-
+    ...mapActions(['signup'])
   }
 
 }

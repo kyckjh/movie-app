@@ -6,7 +6,11 @@
 
 <script>
 export default {
-
+  name: 'LoginView',
+  components: {},
+  computed: {},
+  methods: {},
+  created() {},
 }
 </script>
 
