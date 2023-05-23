@@ -30,7 +30,7 @@
                 </div>
               </div> 
 
-          <router-link :to="{ name: 'LogInView' }"> Log In </router-link>
+          <router-link :to="{ name: 'LoginView' }"> Log In </router-link> | 
           <router-link :to="{ name: 'SignUpView' }"> Sign Up </router-link>
           <!-- <router-link :to="{ name : 'profile', params: { username: currentUser.username} }" class="nav-link text-secondary" -->
             <!-- active-class="active" v-if="isLoggedIn" style="font-size:22px; color: gray !important;"><i class="fa-solid fa-circle-user"></i></router-link> -->

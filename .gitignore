@@ -183,3 +183,8 @@ docs/_book
 test/
 
 # End of https://www.toptal.com/developers/gitignore/api/django,vue
+
+# local env files
+.env
+.env.local
+.env.*.local=

@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         poster_img(){
-            return "https://imge.tmdb.org/t/p/original/" + this.movie.poster_path
+            return "https://image.tmdb.org/t/p/original/" + this.movie.poster_path
         }
     }
 }
