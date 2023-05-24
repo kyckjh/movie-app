@@ -1,14 +1,14 @@
-from django.shortcuts import (get_list_or_404, get_object_or_404,
-                               redirect , render)
+from django.shortcuts import (get_list_or_404, get_object_or_404, redirect,
+                              render)
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 from .models import Actor, Movie, MovieComment
 from .serializers import (ActorDetailSerializer, ActorListSerializer,
-                          MovieDetailSerializer, MovieListSerializer,
-                          MovieCommentSerializer, MovieCommentListSerializer)
+                          MovieCommentListSerializer, MovieCommentSerializer,
+                          MovieDetailSerializer, MovieListSerializer)
 
 # Create your views here.
 
@@ -25,20 +25,20 @@ def actor_list(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
-def movie_detail(request, pk):
-    movie = get_object_or_404(Movie, pk=pk)
+def movie_detail(request, movie_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
     serializer = MovieDetailSerializer(movie)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def actor_detail(request, pk):
-    actor = get_object_or_404(Actor, pk=pk)
+def actor_detail(request, actor_pk):
+    actor = get_object_or_404(Actor, pk=actor_pk)
     serializer = ActorDetailSerializer(actor)
     return Response(serializer.data)
     
 # 영화 댓글 조회 및 만들기
-@permission_classes([IsAuthenticated])
-@api_view(["POST"])
+@permission_classes([IsAuthenticated])  
+@api_view(["GET","POST"])
 def movie_comment_list_or_create(request, movie_pk):
     def comment_list():
         comments = get_list_or_404(MovieComment, pk=movie_pk)[::-1]

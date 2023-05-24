@@ -33,28 +33,33 @@ import _ from 'lodash'
     actions:{
         search: function({ commit }, movie_id ) {
             axios({
-                url: drf.movie.movie(movie_id),
+                url: drf.movies.movie(movie_id),
                 method: 'get',
             })
             .then(res => {
-                console.log(res.data.movie_id)
-                localStorage.setItem('movie', res.data.movie_id)
+                console.log('movie ' + res.data.id);
+                console.log(res.data)
+                localStorage.setItem('movie', res.data.id)
                 commit("SET_MOVIE_ID", movie_id)
                 commit("SET_MOVIE_DATA", res.data)
                     axios({
-                        url: "http://localhost:8000/movies/" + res.data.movie_id + '/comments/',
-                        method: 'get',
+                      url:
+                        'http://localhost:8000/api/v1/' +
+                        res.data.id +
+                        '/comments/',
+                      method: 'get',
                     })
-                    .then(res => {
-                        console.log(res.data)
-                        commit("SET_COMMENT", res.data)
-                    })
-                    .catch(err => {
+                      .then((res) => {
+                        console.log(res.data);
+                        //commit("SET_COMMENT", res.data)
+                      })
+                      .catch((err) => {
+                        alert('err');
                         if (err.response.status === 404) {
-                            commit("SET_MOVIED_COMMENT", {})
-                            router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}})
+                          //commit("SET_MOVIES_COMMENT", {})
+                          //router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}})
                         }
-                    })
+                      });
                     router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}}).catch(err => err)
             })
             .catch(err => {
@@ -72,7 +77,8 @@ import _ from 'lodash'
                 }
             })
             .then(res => {
-                console.log(res.data.results[0].id)
+                console.log(res.data)
+                console.log('movie id: '+res.data.results[0].id)
                 const movie_id = res.data.results[0].id
                 dispatch("search", movie_id)
                 commit("SET_MOVIE_DATA", res.data.results[0])

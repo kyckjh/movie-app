@@ -10,7 +10,7 @@ urlpatterns = [
     path('<int:movie_pk>/like/', views.movie_likes),
 
     # comment
-    path('<int:movie_pk>/comment/', views.movie_comment_list_or_create),\
+    path('<int:movie_pk>/comments/', views.movie_comment_list_or_create),\
     path('comment/<int:comment_pk>/', views.movie_comment_delete),    
 
 ]

@@ -22,18 +22,30 @@
             active-class="active">Search icon</router-link>
           
           <div>
-                <div class="search-form">
-                  <div class="search-box">
-                    <input type="text" @keydown.enter="search_movie_ID(search_movie)" v-model="search_movie"/>
-                    <span></span>
-                  </div>
-                </div>
-              </div> 
+            <div class="search-form">
+              <div class="search-box">
+                <input type="text" @keydown.enter="search_movie_ID(search_movie)" v-model="search_movie"/>
+                &nbsp;
+              </div>
+            </div>
+          </div> 
 
-          <router-link v-show="!isLoggedIn" :to="{ name: 'LoginView' }"> Log In |</router-link> 
-          <router-link v-show="!isLoggedIn" :to="{ name: 'SignUpView' }"> Sign Up |</router-link>
-          <router-link v-show="isLoggedIn" :to="{ name: 'LogoutView' }"> Log Out |</router-link> 
-          <router-link v-if="currentUser.username != undefined && isLoggedIn" :to="{ name: 'ProfilePageView',  params:{ username: currentUser.username }}"> Profile </router-link> 
+          <router-link v-show="!isLoggedIn" 
+          :to="{ name: 'LoginView' }"
+          class="nav-link fw-bold text-secondary"
+          > Login</router-link>  
+          <router-link v-show="!isLoggedIn" 
+          :to="{ name: 'SignUpView' }"
+          class="nav-link fw-bold text-secondary"
+          > Sign Up</router-link> 
+          <router-link v-show="isLoggedIn" 
+          :to="{ name: 'LogoutView' }"
+          class="nav-link fw-bold text-secondary"
+          > Logout</router-link>  
+          <router-link v-if="currentUser.username != undefined && isLoggedIn" 
+          :to="{ name: 'ProfilePageView',  params:{ username: currentUser.username }}"
+          class="nav-link fw-bold text-secondary"
+          >{{currentUser.username}} </router-link> 
 
         </div>
       </ul>
