@@ -2,7 +2,7 @@
     <div class="login_logo display-4">
         Movie Detail
         <div>
-          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >{{poster_path}}
+          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >
             <div class="img">
               <img :src="poster_img" alt="poster">
             </div>
@@ -48,9 +48,9 @@ export default {
   },
   computed: {
       ...mapGetters(['get_movie', 'isLiking', 'currentUser', 'get_movie_data']),
-  },
-  poster_img(){
-            return "https://image.tmdb.org/t/p/original/" + this.poster_path
+    poster_img(){
+        return "https://image.tmdb.org/t/p/original/" + this.poster_path
+    },
   },
 
   methods: {
