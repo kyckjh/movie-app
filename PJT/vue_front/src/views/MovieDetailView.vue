@@ -2,18 +2,19 @@
     <div class="login_logo display-4">
         Movie Detail
         <div>
-          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >{{poster_path}}
+          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >
             <div class="img">
               <img :src="poster_img" alt="poster">
             </div>
             </a>
 
           <h3>title: {{title}}</h3>
-          <h3>overview: {{overview}}</h3>
+          <h5>overview: {{overview}}</h5>
           <h3>release_date : {{release_date }}</h3>
           <h3>popularity: {{popularity }}</h3>
           <h3>like_users: {{like_users}}</h3>
         </div>
+        <actors-list :actor_ids="actor_ids"></actors-list>
 
         <hr>
         <movie-comment-list :movie_id="movie"></movie-comment-list>
@@ -22,6 +23,7 @@
   
 <script>
 import MovieCommentList from '@/components/movie/MovieCommentList.vue'
+import ActorsList from '@/components/movie/ActorsList.vue'
 
 import axios from "axios"
 import { mapActions, mapGetters } from "vuex"
@@ -39,18 +41,20 @@ export default {
       title: '',
       overview: '',
       release_date : '',
-      popularity : '',
-      like_users : '',
+      popularity: '',
+      like_users: '',
+      actor_ids: '',
     }
   },
   components: {
     MovieCommentList,
+    ActorsList,
   },
   computed: {
       ...mapGetters(['get_movie', 'isLiking', 'currentUser', 'get_movie_data']),
-  },
-  poster_img(){
-            return "https://image.tmdb.org/t/p/original/" + this.poster_path
+      poster_img(){
+                return "https://image.tmdb.org/t/p/original/" + this.poster_path
+      },
   },
 
   methods: {
@@ -71,6 +75,8 @@ export default {
       this.popularity  = res.data.popularity 
       this.poster_path  = res.data.poster_path 
       this.like_users = res.data.like_users
+      this.actor_ids = res.data.actor_ids
+      console.log('data '+res.data.actor_ids.length)
     })
     .catch(err => {
       alert(err)
