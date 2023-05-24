@@ -6,6 +6,7 @@ import MainView from '../views/MainView.vue'
 import SignUpView from '@/views/SignUpView'
 import LoginView from '@/views/LoginView'
 import LogoutView from '@/views/LogoutView.vue'
+import ProfileView from '../views/ProfilePageView.vue'
 
 import MovieDetailView from '@/views/MovieDetailView.vue';
 
@@ -36,6 +37,11 @@ const routes = [
     path: '/movieDetail',
     name: 'MovieDetailView',
     component: MovieDetailView,
+  },
+  {
+    path: '/profile/:username',
+    name: 'ProfilePageView',
+    component: ProfileView
   },
   // {
   //   path: '/community',

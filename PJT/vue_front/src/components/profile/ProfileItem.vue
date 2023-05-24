@@ -1,6 +1,6 @@
 <template>
     <div class="app9" >
-    <div id="back_profile" :style="`background-color:${colors[random_num]}`">
+    <!-- <div id="back_profile" :style="`background-color:${colors[random_num]}`"> -->
       <div id="movie_logo"> My Page </div>
       <div class="d-flex justify-content-center">
         <div id="main_profile"  class="d-flex justify-content-between">
@@ -18,7 +18,7 @@
                       <span>follow<span>ed</span></span>
                     </button>
                 </div>
-              </div>
+              <!-- </div> -->
 
               <!-- 본인 프로필이면 팔로우 버튼 x
               팔로우 상태면 언팔로우버튼
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import _ from "lodash"
+// import _ from "lodash"
 import { mapActions, mapGetters } from "vuex"
 
 export default {
