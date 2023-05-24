@@ -16,11 +16,10 @@
                   <div class="phases" id="phase-form">
                     <div class="phase-1">
                       <input id="username" v-model="credentials.username" autocomplete="off" type="text" placeholder="User ID">
-                      <button @click.prevent="next"><i class="fa-solid fa-circle-arrow-right"></i></button>
                     </div>
                     <div class="phase-2">
                       <input type="password" v-model="credentials.password" id="password" @keydown.esc="back" @keydown.enter="submitForm" placeholder="Enter password">
-                      <button @click="submitForm"><i class="fa-solid fa-circle-arrow-right"></i></button>      
+                      <button @click="submitForm"><i class="fa-solid fa-circle-arrow-right">로그인</i></button>      
                     </div>
                   </div>
                   <div class="loading"></div>
@@ -88,6 +87,28 @@ export default {
         }
         this.state = true;
       } 
+    },
+    submitForm() {
+      var password = this.trim(document.getElementById("password").value);
+      if (password) {
+        //Submit form ...
+        document.getElementsByClassName("loading")[0].classList.add("show-it");
+        //setTimeout(() => { this.login(this.credentials) }, 1300)
+        // setTimeout(this.login(this.credentials), 3000)
+        // this.login(this.credentials)
+      } else {
+        document.getElementById("password").classList.add("error");
+      }
+    },
+    back() {
+      if (this.state) {
+        document.getElementById("backbtn").classList.remove("active");
+        document.getElementById("phase-form").classList.remove("next");
+        this.credentials.username = ""
+        this.credentials.password = ""
+        setTimeout(function() {document.getElementById("username").focus()}, 250)
+        this.state = false;
+      }
     },
   }, 
   created() {},

@@ -30,14 +30,10 @@
                 </div>
               </div> 
 
-          <router-link :to="{ name: 'LoginView' }"> Log In </router-link> | 
-          <router-link :to="{ name: 'SignUpView' }"> Sign Up </router-link>
-          <!-- <router-link :to="{ name : 'profile', params: { username: currentUser.username} }" class="nav-link text-secondary" -->
-            <!-- active-class="active" v-if="isLoggedIn" style="font-size:22px; color: gray !important;"><i class="fa-solid fa-circle-user"></i></router-link> -->
-            <router-link to="/logout" class="nav-link text-secondary"
-            active-class="active" v-if="isLoggedIn" style="font-size:22px; color: gray !important;"><i class="fa-solid fa-arrow-right-from-bracket"></i></router-link>
-            <router-link to="/login" class="nav-link text-secondary"
-            active-class="active" v-else style="font-size:22px; color: gray !important;"><i class="fa-solid fa-arrow-right-to-bracket"></i></router-link>
+          <router-link v-show="!isLoggedIn" :to="{ name: 'LoginView' }"> Log In |</router-link> 
+          <router-link v-show="!isLoggedIn" :to="{ name: 'SignUpView' }"> Sign Up |</router-link>
+          <router-link v-show="isLoggedIn" :to="{ name: 'LogoutView' }"> Log Out </router-link> 
+
         </div>
       </ul>
       

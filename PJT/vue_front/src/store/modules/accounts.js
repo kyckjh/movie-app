@@ -64,12 +64,14 @@ export default {
                 data: credentials
             })
             .then(res => {
+                //alert(res)
                 const token = res.data.key
                 dispatch('saveToken', token)
                 dispatch('fetchCurrentUser')
                 router.push({ name: 'MainView' })
             })
             .catch(err => {
+                //alert(err)
                 console.error(err.response.data)
                 commit('SET_AUTH_ERROR', err.response.data)
             })
@@ -101,7 +103,7 @@ export default {
             .then(() => {
                 dispatch('removeToken')
                 alert('Log out.')
-                router.push({ name: 'login' })
+                router.push({ name: 'LoginView' })
             })
             .catch(err => {
                 console.error(err.response)
@@ -122,7 +124,7 @@ export default {
                         dispatch('removeToken')
                         console.log("패치커런트유저 어카운츠스테이트")
 
-                        router.push({ name: 'login'})
+                        router.push({ name: 'LoginView' });
                     }
                 })
             }

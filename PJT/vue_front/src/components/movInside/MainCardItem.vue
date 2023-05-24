@@ -1,10 +1,11 @@
 <template>
   <div>
     <div>
-        <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" ></a>
-        <div class="img">
-            <img :src="poster_img" alt="poster">
-        </div>
+        <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >
+            <div class="img">
+                <img :src="poster_img" alt="poster">
+            </div>
+        </a>
     </div>
   </div>
 </template>

@@ -7,8 +7,7 @@ import SignUpView from '@/views/SignUpView'
 import LoginView from '@/views/LoginView'
 import LogoutView from '@/views/LogoutView.vue'
 
-
-// import MovieDetailView from '../viewss/MovieDetailView.vue'
+import MovieDetailView from '@/views/MovieDetailView.vue';
 
 Vue.use(VueRouter)
 
@@ -16,30 +15,34 @@ const routes = [
   {
     path: '/',
     name: 'MainView',
-    component: MainView
+    component: MainView,
   },
   {
     path: '/signup',
     name: 'SignUpView',
-    component: SignUpView
+    component: SignUpView,
   },
   {
-    path: '/Login',
+    path: '/login',
     name: 'LoginView',
-    component: LoginView
+    component: LoginView,
   },
   {
-    path: '/Logout',
+    path: '/logout',
     name: 'LogoutView',
-    component: LogoutView
+    component: LogoutView,
+  },
+  {
+    path: '/movieDetail',
+    name: 'MovieDetailView',
+    component: MovieDetailView,
   },
   // {
   //   path: '/community',
   //   name: 'community',
   //   component: CommunityView
   // },
-
-]
+];
 
 const router = new VueRouter({
   mode: 'history',

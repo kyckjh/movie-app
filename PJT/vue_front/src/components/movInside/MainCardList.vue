@@ -3,8 +3,7 @@
     <div>Tranding</div>
     
     <div>
-        <carousel v-if="movies.length > 0">
-            
+        <carousel v-if="movies.length > 0">            
             <main-card-item v-for="movie in movies" :key="movie.id" :movie="movie"></main-card-item>
         </carousel>
     </div>
