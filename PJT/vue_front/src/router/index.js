@@ -33,7 +33,7 @@ const routes = [
     component: LogoutView,
   },
   {
-    path: '/movieDetail',
+    path: '/moviedetail/:movie_id',
     name: 'MovieDetailView',
     component: MovieDetailView,
   },

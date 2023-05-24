@@ -52,14 +52,14 @@ import _ from 'lodash'
                     .catch(err => {
                         if (err.response.status === 404) {
                             commit("SET_MOVIED_COMMENT", {})
-                            router.push({ name: 'moviedetail', params: { movie_id: movie_id}})
+                            router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}})
                         }
                     })
-                    router.push({ name: 'moviedetail', params: { movie_id: movie_id}}).catch(err => err)
+                    router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}}).catch(err => err)
             })
             .catch(err => {
                 console.log(err)
-                router.push({ name: 'mainpage'}).catch(err => err)
+                router.push({ name: 'MainView'}).catch(err => err)
             })
         },
 
@@ -82,7 +82,7 @@ import _ from 'lodash'
             })
             .catch(err => {
                 console.log(err)
-                router.push({ name: 'mainpage' }).catch(err => err)
+                router.push({ name: 'MainView' }).catch((err) => err);
             })
         },
         create_movie_Comment({ commit, getters }, { movie_id, content, rate}) {
