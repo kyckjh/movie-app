@@ -51,11 +51,12 @@ import _ from 'lodash'
                     })
                       .then((res) => {
                         console.log(res.data);
-                        commit("SET_COMMENT", res.data)
+                        //commit("SET_COMMENT", res.data)
                       })
                       .catch((err) => {
-                        alert('err');
+                        //alert('err');
                         if (err.response.status === 404) {
+                            console.log('no comments')
                           //commit("SET_MOVIES_COMMENT", {})
                           //router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}})
                         }
