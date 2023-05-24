@@ -17,9 +17,9 @@ export default {
     // img: username => HOST + ACCOUNTS + 'upload_img/' + `${username}/`,
   },
   reviews: {
-    // /articles/
+    // /reviews/
     reviews: () => HOST + REVIEWS,
-    // /articles/1/
+    // /reviews/1/
     review: reviewPk => HOST + REVIEWS + `${reviewPk}/`,
     likeArticle: reviewPk => HOST + REVIEWS + `${reviewPk}/` + 'like/',
     comments: reviewPk => HOST + REVIEWS + `${reviewPk}/` + COMMENTS,

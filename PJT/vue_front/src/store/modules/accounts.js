@@ -12,7 +12,7 @@ export default {
         authError: null,
     },
     
-    // 모든 state는 getters 를 통해서 접근하겠다.
+    // 모든 state는 getters 를 통해서 접근.
     getters: {
         isLoggedIn: state => !!state.token,
         currentUser: state => state.currentUser,
@@ -26,8 +26,8 @@ export default {
     },
 
     mutations: {
-        SET_TOKEN: (state, token) => state.token = token,
         SET_CURRENT_USER: (state, user) => state.currentUser = user,
+        SET_TOKEN: (state, token) => state.token = token,
         SET_PROFILE: (state, profile) => state.profile = profile,
         // SET_PROFILE_IMG: (state, profile_img) => state.profile.profile_img = profile_img,
         SET_AUTH_ERROR: (state, error) => state.authError = error
@@ -116,8 +116,11 @@ export default {
                     method: 'get',
                     headers: getters.authHeader,
                 })
-                .then(res => commit('SET_CURRENT_USER', res.data),
-                console.log("패치커런트유저 어카운츠스테이트")
+                .then(res => {
+                    commit('SET_CURRENT_USER', res.data)
+                    console.log('alert '+ res)
+                },
+                console.log("패치커런트유저 어카운츠스테이트"),
                 )
                 .catch(err => {
                     if (err.response.status === 401) {
