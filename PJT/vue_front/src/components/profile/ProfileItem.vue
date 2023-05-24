@@ -71,7 +71,6 @@ export default {
     mounted() {
         document.querySelectorAll('.heart, .heart-button').forEach(button => button.addEventListener('click', () => button.classList.toggle('active')))
     }
-
 }
 </script>
 

@@ -1,9 +1,8 @@
 <template>
     <div>
         <div id="owl">
-        <h1>asdf</h1>
 
-        <span v-for="actor in actor_ids" :key="actor">actor: {{ actor }}</span>
+        <!-- <span v-for="actor in actor_ids" :key="actor">actor: {{ actor }}</span> -->
 
         <carousel v-if="actor_ids.length > 0">
         <actors-item v-for="actor in actor_ids" 

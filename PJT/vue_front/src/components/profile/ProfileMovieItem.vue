@@ -1,7 +1,8 @@
 <template>
     <div class="col-3 movie">
     <a :href="`http://localhost:8080/moviedetail/${ movie_id }`">
-      <div class="containers" :style="`background: url('https://image.tmdb.org/t/p/original${poster_path}')`">
+      <div class="containers" 
+      :style="`background: url('https://image.tmdb.org/t/p/original${poster_path}')`">
         <div class="overlay">
           <div class = "items"></div>
           <div class = "items head">

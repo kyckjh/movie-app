@@ -1,10 +1,10 @@
 <template>
     <div class="m-3 carousel card">
-      <p class="carousel-text">name: {{name}}  character: {{ character }}</p>
-      <div class="carousel-bg"></div>
-      <img v-if="image_path == null" 
-      src="@/assets/annonymous.jpg" alt="actor">
-      <img v-else :src="actorImg" alt="actor">
+        <div class="carousel-bg"></div>
+        <img v-if="image_path == null" 
+        src="@/assets/annonymous.jpg" alt="actor">
+        <img v-else :src="actorImg" alt="actor">
+        <p class="carousel-text">name: {{name}}  character: {{ character }}</p>
   </div>
 
 </template>
