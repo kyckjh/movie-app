@@ -15,7 +15,7 @@
                     <input id="username" v-model="credentials.username" autocomplete="off" type="text" placeholder="아이디를 입력하세요." required>
                     <input id="email" v-model="credentials.email" autocomplete="off" type="text" placeholder="이메일을 입력하세요." required>
                     <input type="password" v-model="credentials.password1" id="password1" autocomplete="off"  placeholder="비밀번호를 입력하세요." required>
-                    <input type="password" v-model="credentials.password2" id="password2" autocomplete="off"  @keydown.enter="submitForm" placeholder="비밀번호 확인" required>
+                    <input type="password" v-model="credentials.password2" id="password2" autocomplete="off"  placeholder="비밀번호 확인" required>
                   </div>
                   <div>
                     <div class="separator mt-4" style="width:100%; max-width: 328px; margin:auto; height: 1px; background-image: url(https://appleid.cdn-apple.com/appleauth/static/bin/cb1633718600/dist/assets/HR_gradient_dark.png); background-size: cover;"></div>
