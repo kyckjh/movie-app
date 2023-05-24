@@ -33,7 +33,7 @@
           <router-link v-show="!isLoggedIn" :to="{ name: 'LoginView' }"> Log In |</router-link> 
           <router-link v-show="!isLoggedIn" :to="{ name: 'SignUpView' }"> Sign Up |</router-link>
           <router-link v-show="isLoggedIn" :to="{ name: 'LogoutView' }"> Log Out |</router-link> 
-          <router-link v-show="isLoggedIn" :to="{ name: 'ProfilePageView',  params:{ username: currentUser.username }}"> Profile </router-link> 
+          <router-link v-if="currentUser.username != undefined && isLoggedIn" :to="{ name: 'ProfilePageView',  params:{ username: currentUser.username }}"> Profile </router-link> 
 
         </div>
       </ul>
@@ -79,9 +79,9 @@ export default {
     ...mapActions(['fetchCurrentUser', 'search_movie_ID'])
   },
   created() {
-    //this.fetchCurrentUser()
-    setTimeout(() => { this.fetchCurrentUser() }, 3000)
-    alert('username'+ this.currentUser.username)
+    this.fetchCurrentUser()
+    //setTimeout(() => { this.fetchCurrentUser() }, 3000)
+    //alert('username'+ this.currentUser.username)
   }
 }
 </script>

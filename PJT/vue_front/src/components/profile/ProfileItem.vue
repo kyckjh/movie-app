@@ -48,7 +48,7 @@ export default {
         likeCount() {
             return this.profile.like_movies?.length
         },
-        followerCount() {
+        followersCount() {
             return this.profile.followers?.length
         },
         followingsCount() {
