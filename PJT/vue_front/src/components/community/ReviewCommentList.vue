@@ -1,5 +1,5 @@
 <template>
-    <div class="article-comment-list">
+    <div class="review-comment-list">
     <review-comment-list-item 
       v-for="comment in comments" 
       :comment="comment" 

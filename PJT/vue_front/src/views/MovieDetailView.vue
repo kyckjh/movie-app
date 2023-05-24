@@ -1,8 +1,18 @@
 <template>
     <div class="login_logo display-4">
-        MovieDetailView
+        Movie Detail
         <div>
+          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >{{poster_path}}
+            <div class="img">
+              <img :src="poster_img" alt="poster">
+            </div>
+            </a>
+
           <h3>title: {{title}}</h3>
+          <h3>overview: {{overview}}</h3>
+          <h3>release_date : {{release_date }}</h3>
+          <h3>popularity: {{popularity }}</h3>
+          <h3>like_users: {{like_users}}</h3>
         </div>
 
         <hr>
@@ -25,7 +35,12 @@ export default {
     return {      
       movie: this.$route.params.movie_id,
       moviePk: this.$route.params.movie_id,
+      poster_path : '',
       title: '',
+      overview: '',
+      release_date : '',
+      popularity : '',
+      like_users : '',
     }
   },
   components: {
@@ -34,6 +49,10 @@ export default {
   computed: {
       ...mapGetters(['get_movie', 'isLiking', 'currentUser', 'get_movie_data']),
   },
+  poster_img(){
+            return "https://image.tmdb.org/t/p/original/" + this.poster_path
+  },
+
   methods: {
     ...mapActions(['likeMovie', 'fetchCurrentUser', 'search']),
   },
@@ -47,6 +66,11 @@ export default {
     .then(res => {
       //alert(res.data)
       this.title = res.data.title
+      this.overview = res.data.overview
+      this.release_date = res.data.release_date
+      this.popularity  = res.data.popularity 
+      this.poster_path  = res.data.poster_path 
+      this.like_users = res.data.like_users
     })
     .catch(err => {
       alert(err)
