@@ -1,8 +1,16 @@
-from rest_framework import serializers
-from .models import Actor, Movie, MovieComment
+from accounts.models import User
 from community.serializers import ReviewListSerializer
+from rest_framework import serializers
+
+from .models import Actor, Movie, MovieComment
 
 
+class UserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('pk','username',)
+        
 # 영화 배우 리스트
 class ActorListSerializer(serializers.ModelSerializer):
     class Meta:
@@ -37,11 +45,13 @@ class ActorDetailSerializer(ActorListSerializer):
 # 영화 댓글
 class MovieCommentSerializer(serializers.ModelSerializer):
     movie = MovieListSerializer(read_only=True)
+    user = UserSerializer(read_only=True)
     class Meta:
         model = MovieComment
         fields = ("content", "user", "movie",)
 
 class MovieCommentListSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)
     class Meta:
         model = MovieComment
         fields = ('id', 'content', 'user')

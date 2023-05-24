@@ -41,7 +41,8 @@ def actor_detail(request, actor_pk):
 @api_view(["GET","POST"])
 def movie_comment_list_or_create(request, movie_pk):
     def comment_list():
-        comments = get_list_or_404(MovieComment, pk=movie_pk)[::-1]
+        movie = get_object_or_404(Movie, pk=movie_pk)
+        comments = get_list_or_404(MovieComment, movie=movie)[::-1]
         serializer = MovieCommentListSerializer(comments, many=True)
         return Response(serializer.data)
     
@@ -49,7 +50,7 @@ def movie_comment_list_or_create(request, movie_pk):
         movie = get_object_or_404(Movie, pk=movie_pk)
         serializer = MovieCommentSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
-            serializer.save(movie=movie)
+            serializer.save(user=request.user, movie=movie)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     if request.method == "GET":
         return comment_list()

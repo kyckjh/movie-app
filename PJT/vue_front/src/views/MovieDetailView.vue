@@ -4,10 +4,15 @@
         <div>
           <h3>title: {{title}}</h3>
         </div>
+
+        <hr>
+        <movie-comment-list :movie_id="movie"></movie-comment-list>
     </div>
   </template>
   
 <script>
+import MovieCommentList from '@/components/movie/MovieCommentList.vue'
+
 import axios from "axios"
 import { mapActions, mapGetters } from "vuex"
 const URL = "https://api.themoviedb.org/3/movie/"
@@ -23,7 +28,9 @@ export default {
       title: '',
     }
   },
-  components: {},
+  components: {
+    MovieCommentList,
+  },
   computed: {
       ...mapGetters(['get_movie', 'isLiking', 'currentUser', 'get_movie_data']),
   },

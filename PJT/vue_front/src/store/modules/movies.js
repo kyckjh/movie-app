@@ -51,7 +51,7 @@ import _ from 'lodash'
                     })
                       .then((res) => {
                         console.log(res.data);
-                        //commit("SET_COMMENT", res.data)
+                        commit("SET_COMMENT", res.data)
                       })
                       .catch((err) => {
                         alert('err');
