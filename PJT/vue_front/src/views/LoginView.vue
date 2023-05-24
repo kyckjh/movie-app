@@ -16,7 +16,7 @@
                   <div class="phases" id="phase-form">
                     <div class="phase-1">
                       <input id="username" v-model="credentials.username" autocomplete="off" type="text" placeholder="User ID">
-                      <button @click.prevent="next"><i class="fa-solid fa-circle-arrow-right"></i></button>
+                      
                     </div>
                     <div class="phase-2">
                       <input type="password" v-model="credentials.password" id="password" @keydown.esc="back" @keydown.enter="submitForm" placeholder="Enter password">
