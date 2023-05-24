@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
 class ActorListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actor
-        fields = ("id", "name", "character")
+        fields = ("id", "name", "character", "image_path")
 
 # 영화 리스트
 class MovieListSerializer(serializers.ModelSerializer):

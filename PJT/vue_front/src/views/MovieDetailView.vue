@@ -9,11 +9,12 @@
             </a>
 
           <h3>title: {{title}}</h3>
-          <h3>overview: {{overview}}</h3>
+          <h5>overview: {{overview}}</h5>
           <h3>release_date : {{release_date }}</h3>
           <h3>popularity: {{popularity }}</h3>
           <h3>like_users: {{like_users}}</h3>
         </div>
+        <actors-list :movie_id="movie"></actors-list>
 
         <hr>
         <movie-comment-list :movie_id="movie"></movie-comment-list>
@@ -22,6 +23,7 @@
   
 <script>
 import MovieCommentList from '@/components/movie/MovieCommentList.vue'
+import ActorsList from '@/components/movie/ActorsList.vue'
 
 import axios from "axios"
 import { mapActions, mapGetters } from "vuex"
@@ -39,12 +41,13 @@ export default {
       title: '',
       overview: '',
       release_date : '',
-      popularity : '',
-      like_users : '',
+      popularity: '',
+      like_users: '',
     }
   },
   components: {
     MovieCommentList,
+    ActorsList,
   },
   computed: {
       ...mapGetters(['get_movie', 'isLiking', 'currentUser', 'get_movie_data']),
