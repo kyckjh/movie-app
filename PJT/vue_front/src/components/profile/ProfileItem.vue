@@ -1,37 +1,35 @@
 <template>
-    <div class="app9" >
-    <!-- <div id="back_profile" :style="`background-color:${colors[random_num]}`"> -->
-      <div id="movie_logo"> Profile </div>
-      <div class="d-flex justify-content-center">
-        <div id="main_profile"  class="d-flex justify-content-between">
+<div class="app9" >
+<div> Profile </div><hr>
+  <div class="d-flex justify-content-center">
+      <div class="d-flex flex-column mt-3">
+        <div class="d-flex justify-content-between">
           <div class="d-flex flex-column">
-          </div>
-          <div class="d-flex flex-column" style="margin-top: 80px">
             <div class="d-flex justify-content-between">
               <div style="font-size: 50px">
-              <!-- </div> -->
-            </div>
-          <div class="d-flex flex-column" style="margin-top: 80px">
-            <div class="d-flex justify-content-between">
-              <div style="font-size: 50px">
-                <div v-if="currentUser.username == profile.username" style="margin:0;">Wellcome!</div>
-                <div>{{ profile.username }}<span v-if="currentUser.username == profile.username" 
-                  style="margin:0; font-size:50px">
-                  .
-                </span>
-                <span v-else style="margin:0; font-size:50px">의</span></div>
+                <div v-if="currentUser.username == profile.username" style="margin:0;">
+                  Welcome! {{ profile.username }}
+                </div>
+                <div>
+                  <span v-if="currentUser.username == profile.username" 
+                  style="margin:0; font-size:50px">                  .
+                  </span>
+                  <span v-else style="margin:0; font-size:50px">의</span>
+                </div>
                 <div class="d-flex align-items-center">
-                  <div v-if="currentUser.username != profile.username" style="margin:0; font-size:50px; font-weight: 500">프로필</div>
-                    <button v-if="currentUser.username != profile.username" id="follow" @click="followProfile(username)" class="heart-button" :class="{active : isFollowing}">
-                      <div class="heart-flip"></div>
-                      <span>follow<span>ed</span></span>
-                    </button>
+                  <div v-if="currentUser.username != profile.username" 
+                  style="margin:0; font-size:50px; font-weight: 500">
+                    프로필
+                  </div>
+                  <button v-if="currentUser.username != profile.username" id="follow" @click="followProfile(username)" class="heart-button" :class="{active : isFollowing}">
+                  <div class="heart-flip"></div>
+                  <span>follow<span>ed</span></span>
+                  </button>
                 </div>
               </div>
-
-              <!-- 본인 프로필이면 팔로우 버튼 x
-              팔로우 상태면 언팔로우버튼
-              언팔로우 상태면 팔로우버튼 -->
+                <!-- 본인 프로필이면 팔로우 버튼 x
+                팔로우 상태면 언팔로우버튼
+                언팔로우 상태면 팔로우버튼 -->
             </div>
             <div>
               <span>{{ likeCount }} movie &nbsp;</span>
@@ -41,9 +39,9 @@
           </div>
         </div>
       </div>
-    </div>
+    
   </div>
-  </div>
+</div>
 
 </template>
 

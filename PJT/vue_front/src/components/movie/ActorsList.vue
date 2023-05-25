@@ -1,5 +1,6 @@
 <template>
 <div>
+    <h1 class="text-start mt-5">Credits</h1>
     <div id="owl">
         <carousel v-if="actor_ids.length > 0"  :items="7">
             <actors-item v-for="actor in actor_ids" 
