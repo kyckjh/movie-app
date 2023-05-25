@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h5>comment: {{payload.content}}</h5>
-    <h5>username: {{ comment.user.username }}</h5>
   <hr>
+    <h5 class="fs-6">작성자 : {{ comment.user.username }}</h5>
+    <h5 class="">ㅡ {{payload.content}}</h5>
   </div>
 </template>
 

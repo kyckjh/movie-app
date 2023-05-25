@@ -2,7 +2,7 @@
   <div>
     <div>
         <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >
-            <div class="img">
+            <div class="img" >
                 <img :src="poster_img" alt="poster">
             </div>
         </a>

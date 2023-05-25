@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-if="num == 1">Trending</div>
-    <div v-else>Animation</div>
+    <div v-if="num == 1" class="m-3">Trending</div>
+    <div v-else class="m-3">Animation</div>
     
     <div>
-        <carousel v-if="movies.length > 0">            
-            <main-card-item v-for="movie in movies" :key="movie.id" :movie="movie"></main-card-item>
+        <carousel v-if="movies.length > 0" :items="7">            
+            <main-card-item  v-for="movie in movies" :key="movie.id" :movie="movie"></main-card-item>
         </carousel>
     </div>
   </div>

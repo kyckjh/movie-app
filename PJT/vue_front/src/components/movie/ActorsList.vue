@@ -1,16 +1,13 @@
 <template>
-    <div>
-        <div id="owl">
-
-        <!-- <span v-for="actor in actor_ids" :key="actor">actor: {{ actor }}</span> -->
-
-        <carousel v-if="actor_ids.length > 0">
-        <actors-item v-for="actor in actor_ids" 
-        :key="actor"
-        :actor="actor">{{ actor }}</actors-item>
-      </carousel>
+<div>
+    <div id="owl">
+        <carousel v-if="actor_ids.length > 0"  :items="7">
+            <actors-item v-for="actor in actor_ids" 
+            :key="actor"
+            :actor="actor">{{ actor }}</actors-item>
+        </carousel>
     </div>
-  </div>
+</div>
 
 </template>
 

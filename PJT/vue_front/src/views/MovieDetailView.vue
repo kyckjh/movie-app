@@ -14,7 +14,7 @@
             <div class="img">
               <img :src="poster_img" alt="poster" style="width:500px;">
             </div>
-            </a>
+          </a>
 
           <h3>제목: {{title}}</h3>
           <h5>줄거리: {{overview}}</h5>

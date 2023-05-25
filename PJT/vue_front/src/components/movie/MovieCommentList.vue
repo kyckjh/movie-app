@@ -1,16 +1,18 @@
 <template>
-  <div>
-    <h1>MovieCommentList</h1>
+  <div class="text-start m-5">
+    <h2>댓글</h2>
     
     <div>
       <movie-comment-item v-for="comment in get_comments" :key="comment.id" :comment="comment"></movie-comment-item>
     </div>
     <div v-if="isLoggedIn" id="comment_writer">
         <form @submit.prevent="create_movie_Comment(commentform); add();">
-          <div class="d-flex row" style="margin: 10px 10px 10px 10px;">
+          <div class="d-flex row">
             <div>
-              <div class="d-flex justify-content-between">
-                <div>
+              <hr>
+              <h2>댓글 쓰기</h2>
+              <div class="d-flex justify-content-between">                
+                <div class="fs-3">
                   <label for="comment_w" id="user">{{ currentUser.username }}</label>
                 </div>             
               </div>
