@@ -18,8 +18,10 @@
         </div>
 
         <div class="d-flex me-3">
+          <router-link to="/community" class="nav-link fw-bold text-secondary" active-class="active">Community</router-link>
+
           <router-link to="/" class="nav-link fw-bold text-secondary"
-            active-class="active">Search icon</router-link>
+            active-class="active">Search</router-link>
           
           <div>
             <div class="search-form">

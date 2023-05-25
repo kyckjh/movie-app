@@ -58,8 +58,8 @@ export default {
 
 <style scoped>
 img {
-  width: 100%;
-  height: 200px;
+  width: 80%;
+  height: 70%;
   overflow: hidden;
 }
 </style>
