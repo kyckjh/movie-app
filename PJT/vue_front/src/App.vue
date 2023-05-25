@@ -1,5 +1,5 @@
 <template>
-  <div id="MovInside">
+  <div class="MovInside">
     <nav>
       <ul class="nav align-items-center justify-content-between">
         <div class="d-flex align-items-center justify-content-between">
@@ -18,8 +18,10 @@
         </div>
 
         <div class="d-flex me-3">
+          <router-link to="/community" class="nav-link fw-bold text-secondary" active-class="active">Community</router-link>
+
           <router-link to="/" class="nav-link fw-bold text-secondary"
-            active-class="active">Search icon</router-link>
+            active-class="active">Search</router-link>
           
           <div>
             <div class="search-form">
@@ -104,7 +106,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: whitesmoke;
 }
 
 nav {
@@ -113,10 +115,14 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: whitesmoke;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
 }
+.MovInside {
+    background: black;
+  }
+
 </style>

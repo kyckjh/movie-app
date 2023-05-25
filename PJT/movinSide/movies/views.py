@@ -89,7 +89,7 @@ def recommend(request):
     for movie in movies:
         if movie.genre_ids.filter(id=16):
             animations.append(movie)
-        if len(animations) > 10:
+        if len(animations) > 100:
             break
     serializer = MovieListSerializer(animations, many=True)
     return Response(serializer.data)

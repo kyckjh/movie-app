@@ -2,7 +2,6 @@
   <div class="haha">
     <hr>
     <div class="community d-flex justify-content-between">      
-      <h1>커뮤니티</h1>
       <!-- <router-link :to="{ name: 'reviewNew' }">
         <button class="yp-btn yp-btn-white">게시글 작성</button>
       </router-link> -->

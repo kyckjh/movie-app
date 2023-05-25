@@ -1,13 +1,12 @@
 <template>
-    <div class="login_logo display-4">
-        MainView
-
+        <div class="login_logo display-4">
+            
         <div>
             <main-card-list :num="1">main card list</main-card-list>
             <main-card-list :num="2">main card list</main-card-list>
         </div>
     </div>
-  </template>
+</template>
   
   <script>
     import MainCardList from '../components/movInside/MainCardList.vue'
@@ -57,5 +56,5 @@ function clickCerosel(){
   </script>
   
   <style>
-  
+
   </style>

@@ -2,10 +2,10 @@
     <div id="comment-list-item">
       <div class="d-flex justify-content-between">
         <div class="d-flex">
-          <a :href="`http://localhost:8080/profile/${ comment.user.username }`">
+          <!-- <a :href="`http://localhost:8080/profile/${ comment.user.username }`">
             <img v-if="comment.user.profile_img" :src="comment.user.profile_img" alt="profile_img" class="profile_img">
             <img v-else class="profile_img" src="@/assets/default_profile.jpg">
-          </a>
+          </a> -->
           <div id="comment_info">
             <div class="d-flex">
               <router-link :to="{ name: 'profile', params: { username: comment.user.username } }">

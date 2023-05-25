@@ -45,7 +45,7 @@ export default {
                 }
             })
             .then(res => {
-                this.movies = res.data.results.slice(0, 10)
+                this.movies = res.data.results.slice(0, 100)
             })
             .catch(err => {
                 console.log(err)
@@ -58,17 +58,18 @@ export default {
             })
             .then(res => {
                 //console.log(res.data)
-                this.movies = res.data.slice(0, 10)
+                this.movies = res.data.slice(0, 100)
             })
             .catch(err => {
                 console.log(err)
             })
         }
-        
     }
 }
 </script>
 
 <style>
-
+.trand {
+    margin: 15px;
+}
 </style>

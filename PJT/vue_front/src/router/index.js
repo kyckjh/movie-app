@@ -6,12 +6,12 @@ import MainView from '../views/MainView.vue'
 import SignUpView from '@/views/SignUpView'
 import LoginView from '@/views/LoginView'
 import LogoutView from '@/views/LogoutView.vue'
-import ProfileView from '../views/ProfilePageView.vue'
-// import CommunityView from '../views/CommunityView.vue'
-
+import ProfileView from '@/views/ProfilePageView.vue'
 
 import MovieDetailView from '@/views/MovieDetailView.vue';
-import ReviewDetailView from '@/components/community/ReviewDetailView.vue';
+
+import CommunityView from '@/views/CommunityView.vue'
+import ReviewDetailView from '@/components/community/ReviewDetail.vue';
 
 Vue.use(VueRouter)
 
@@ -48,14 +48,14 @@ const routes = [
   },
   {
     path: '/reviewdetail/:review_id',
-    name: 'ReviewDetailView',
+    name: 'ReviewDetail',
     component: ReviewDetailView,
   },
-  // {
-  //   path: '/community',
-  //   name: 'community',
-  //   component: CommunityView
-  // },
+  {
+    path: '/community',
+    name: 'CommunityView',
+    component: CommunityView
+  },
 ];
 
 const router = new VueRouter({
