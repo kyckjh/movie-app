@@ -12,9 +12,11 @@
     v-for="review in reviews"
     :key="review.pk">
     <hr>
-    <p> title: {{ review.title }}</p>
-    <p> content: {{ review.content }}</p>
-    <p> user: {{ review.user }}</p>
+    <a :href="`http://localhost:8080/reviewdetail/${ review.pk }`" >
+      <p> title: {{ review.title }}</p>
+      <p> content: {{ review.content.slice(0,200) }}...</p>
+      <p> user: {{ review.user }}</p>
+    </a>
     </div>
     
     

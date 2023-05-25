@@ -98,11 +98,23 @@ export default {
             NotFound404 로 이동
       */
       axios({
-        url: drf.reviews.article(reviewPk),
+        url: drf.reviews.review(reviewPk),
         method: 'get',
         headers: getters.authHeader,
       })
-        .then((res) => commit('SET_REVIEW', res.data))
+        .then((res) => {
+          axios({
+            url: drf.accounts.user(res.data['user']),
+            method: 'get',
+            headers: getters.authHeader,
+          })
+            .then((result) => {
+              console.log(result.data['username']);
+              res.data['user'] = result.data['username'];
+            })
+            .catch((err) => console.error(err.response));
+          commit('SET_REVIEW', res.data)
+        })
         .catch((err) => {
           console.error(err.response);
           if (err.response.status === 404) {
