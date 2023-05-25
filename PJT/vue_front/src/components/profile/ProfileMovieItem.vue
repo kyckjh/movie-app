@@ -2,12 +2,11 @@
     <div class="col-3 movie">
     <a class="containers" :href="`http://localhost:8080/moviedetail/${ movie_id }`">
       <img :src="like_poster" alt="like_poster">
-      <div class="overlay">
           <div class = "items"></div>
           <div class = "items head">
             <p>{{ title }}</p>
             <hr>
-        </div>
+
       </div>
       </a>
   </div>
@@ -58,7 +57,9 @@ export default {
 </script>
 
 <style scoped>
-.containers {
-  width: 100px;
+img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 </style>
