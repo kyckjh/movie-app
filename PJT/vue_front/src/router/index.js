@@ -7,6 +7,8 @@ import SignUpView from '@/views/SignUpView'
 import LoginView from '@/views/LoginView'
 import LogoutView from '@/views/LogoutView.vue'
 import ProfileView from '../views/ProfilePageView.vue'
+// import CommunityView from '../views/CommunityView.vue'
+
 
 import MovieDetailView from '@/views/MovieDetailView.vue';
 

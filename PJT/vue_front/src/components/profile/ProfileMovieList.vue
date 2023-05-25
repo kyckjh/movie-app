@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import ProfileMovieItem from './ProfileMovieItem.vue'
+import ProfileMovieItem from '@/components/profile/ProfileMovieItem.vue'
 
 export default {
-  name: 'profile_movie_item',
+  name: 'ProfileMovieList',
   components: {
     ProfileMovieItem,
   },
@@ -23,7 +23,22 @@ export default {
   }
 }
 </script>
-2
+
 <style>
 
+#movie_logo {
+    font-family: 'Noto Sans KR',  sans-serif;
+    font-weight: 700;
+    font-size: 2.0rem
+  }
+
+  #movie_logo:after {
+  content: "";
+  display: block;
+  width: 85px;
+  border-bottom: 2px solid #bcbcbc;
+  margin: 3px auto;
+  position: absolute;
+  margin-left: 3px;
+  }
 </style>

@@ -109,6 +109,24 @@ import _ from 'lodash'
                 commit('SET_MOVIES_COMMENT', res.data)
             })
             .catch(err => console.error(err.response))
-        }
-    }
+        },
+        likeMovie({ commit, getters }, moviePk) {
+            /* 좋아요
+            POST: likeMovie URL(token)
+              성공하면
+                state.article 갱신
+              실패하면
+                에러 메시지 표시
+            */
+            axios({
+              url: drf.movies.likeMovie(moviePk),
+              method: 'post',
+              headers: getters.authHeader,
+            })
+              .then(res => commit('SET_MOVIE_DATA', res.data))
+              .catch(err => console.error(err.response))
+          },
+      },
+    
+  
  }

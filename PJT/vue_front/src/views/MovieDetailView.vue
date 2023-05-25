@@ -36,6 +36,7 @@ import ActorsList from '@/components/movie/ActorsList.vue'
 
 import axios from "axios"
 import { mapActions, mapGetters } from "vuex"
+
 const URL = "https://api.themoviedb.org/3/movie/"
 const API_KEY = process.env.VUE_APP_TMDB_API_KEY
 
