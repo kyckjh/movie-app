@@ -1,16 +1,20 @@
 <template>
-    <div class="login_logo display-4">
-        MainView
-
+        <div class="login_logo display-4">
+            
         <div>
             <main-card-list>main card list</main-card-list>
-
+            
+        </div>
+        <div>
+            <recommand-list>recommand list</recommand-list>
+            
         </div>
     </div>
-  </template>
+</template>
   
   <script>
     import MainCardList from '../components/movInside/MainCardList.vue'
+    import RecommandList from '../components/movInside/RecommandList.vue'
     import movie from '../assets/main_movies/movies.json'
 
     // let num = _.random(1, 9)
@@ -19,6 +23,7 @@
     name: 'MainView',
     components: {
         MainCardList,
+        RecommandList,
     },
     data: function() {
         return{
@@ -57,5 +62,5 @@ function clickCerosel(){
   </script>
   
   <style>
-  
+
   </style>

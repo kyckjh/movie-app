@@ -1,5 +1,5 @@
 <template>
-  <div id="MovInside">
+  <div class="MovInside">
     <nav>
       <ul class="nav align-items-center justify-content-between">
         <div class="d-flex align-items-center justify-content-between">
@@ -104,7 +104,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: whitesmoke;
 }
 
 nav {
@@ -113,10 +113,14 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: whitesmoke;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
 }
+.MovInside {
+    background: black;
+  }
+
 </style>

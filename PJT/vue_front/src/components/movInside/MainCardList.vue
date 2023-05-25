@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>Tranding</div>
+    <div class="trand">Tranding</div>
     
     <div>
         <carousel v-if="movies.length > 0">            
@@ -38,7 +38,7 @@ export default {
             }
         })
         .then(res => {
-            this.movies = res.data.results.slice(0, 10)
+            this.movies = res.data.results.slice(0, 100)
         })
         .catch(err => {
             console.log(err)
@@ -48,5 +48,7 @@ export default {
 </script>
 
 <style>
-
+.trand {
+    margin: 15px;
+}
 </style>
