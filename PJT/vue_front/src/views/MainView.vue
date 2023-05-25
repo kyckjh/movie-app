@@ -3,8 +3,8 @@
         MainView
 
         <div>
-            <main-card-list>main card list</main-card-list>
-
+            <main-card-list :num="1">main card list</main-card-list>
+            <main-card-list :num="2">main card list</main-card-list>
         </div>
     </div>
   </template>

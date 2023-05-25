@@ -81,3 +81,15 @@ def movie_likes(request, movie_pk):
         movie.like_users.add(user)
         serializer = MovieDetailSerializer(movie)
         return Response(serializer.data)
+    
+@api_view(['GET'])
+def recommend(request):
+    movies = get_list_or_404(Movie)
+    animations = []
+    for movie in movies:
+        if movie.genre_ids.filter(id=16):
+            animations.append(movie)
+        if len(animations) > 10:
+            break
+    serializer = MovieListSerializer(animations, many=True)
+    return Response(serializer.data)

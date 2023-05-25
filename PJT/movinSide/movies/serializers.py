@@ -21,7 +21,7 @@ class ActorListSerializer(serializers.ModelSerializer):
 class MovieListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ("title", "overview")
+        fields = '__all__'
 
 # 영화 상세 조회
 class MovieDetailSerializer(MovieListSerializer):
