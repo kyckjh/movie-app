@@ -1,10 +1,10 @@
 <template>
     <div class="col-3 movie">
-    <a class="containers" :href="`http://localhost:8080/moviedetail/${ movie_id }`">
+    <a class="containers text-decoration-none" :href="`http://localhost:8080/moviedetail/${ movie_id }`">
       <img :src="like_poster" alt="like_poster">
           <div class = "items"></div>
           <div class = "items head">
-            <p>{{ title }}</p>
+            <p class="text-white">{{ title }}</p>
             <hr>
 
       </div>

@@ -3,11 +3,11 @@
         <h1>Community</h1>
 
       <div>
-          <div class="d-flex justify-content-around">
-          <review-detail></review-detail>
-        </div>
-          <review-list></review-list>
-              
+        <div class="d-flex justify-content-around">
+        <community-list></community-list>
+        
+      </div>
+
           
         
       </div>
@@ -16,14 +16,12 @@
   </template>
   
   <script>
-  import ReviewList from '../components/community/ReviewList.vue'
-  import ReviewDetail from '../components/community/ReviewDetail.vue'
+import CommunityList from '../components/community/CommunityList.vue'
   
   export default {
     name: 'CommunityView',
     components: {
-        ReviewList,
-        ReviewDetail,
+        CommunityList
     }
   }
   </script>

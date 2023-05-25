@@ -11,7 +11,9 @@ import ProfileView from '@/views/ProfilePageView.vue'
 import MovieDetailView from '@/views/MovieDetailView.vue';
 
 import CommunityView from '@/views/CommunityView.vue'
+import CommunityList from '@/components/community/CommunityList.vue'
 import ReviewDetailView from '@/components/community/ReviewDetail.vue';
+import CommunityCreateView from '@/views/CommunityCreateView.vue'
 
 Vue.use(VueRouter)
 
@@ -55,6 +57,16 @@ const routes = [
     path: '/community',
     name: 'CommunityView',
     component: CommunityView
+  },
+  {
+    path: '/community/create',
+    name: 'CommunityCreateView',
+    component: CommunityCreateView
+  },
+  {
+    path: '/community/reviews',
+    name: 'CommunityList',
+    component: CommunityList
   },
 ];
 
