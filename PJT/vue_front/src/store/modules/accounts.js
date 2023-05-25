@@ -118,14 +118,13 @@ export default {
                 })
                 .then(res => {
                     commit('SET_CURRENT_USER', res.data)
-                    console.log('alert '+ res)
                 },
-                console.log("패치커런트유저 어카운츠스테이트"),
+                //console.log("패치커런트유저 어카운츠스테이트"),
                 )
                 .catch(err => {
                     if (err.response.status === 401) {
                         dispatch('removeToken')
-                        console.log("패치커런트유저 어카운츠스테이트")
+                        //console.log("패치커런트유저 어카운츠스테이트")
 
                         router.push({ name: 'LoginView' });
                     }

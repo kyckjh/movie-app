@@ -1,19 +1,23 @@
-from django.shortcuts import (get_list_or_404, get_object_or_404,
-                               redirect , render)
+from accounts.models import User
+from django.shortcuts import (get_list_or_404, get_object_or_404, redirect,
+                              render)
+from movies.models import Movie
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 from .models import Review, ReviewComment
-from .serializers import ReviewCommentSerializer, ReviewDetailSerializer, ReviewListSerializer
-from movies.models import Movie
+from .serializers import (ReviewCommentSerializer, ReviewDetailSerializer,
+                          ReviewListSerializer)
+
 
 # Create your views here.
 @api_view(['GET'])
-def review_list(request):
-    review = get_list_or_404(Review)
-    serializer = ReviewListSerializer(review, many=True)
+def review_list(request, movie_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
+    reviews = get_list_or_404(Review, movie=movie)
+    serializer = ReviewListSerializer(reviews, many=True)
     return Response(serializer.data)
 
 @permission_classes([IsAuthenticated])

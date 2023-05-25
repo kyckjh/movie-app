@@ -14,7 +14,7 @@
                   <label for="comment_w" id="user">{{ currentUser.username }}</label>
                 </div>             
               </div>
-              <textarea name="" id="comment_w" cols="30" rows="10" autocomplete="off" autocorrect="off" maxlength="200" v-model="commentform.content"></textarea>
+              <textarea name="" id="comment_w" cols="30" rows="5" autocomplete="off" autocorrect="off" maxlength="200" v-model="commentform.content"></textarea>
             </div>
             <div class=" d-flex justify-content-end">
               <button>등록</button>
@@ -61,7 +61,7 @@ export default {
   created() {
     axios.get("http://localhost:8000/api/v1/" + this.$route.params.movie_id + "/comments/", {})
       .then(res => {
-        console.log(res.data)
+        //console.log(res.data)
         //this.get_comments = res.data
         this.$store.state.get_comments = res.data
       }),

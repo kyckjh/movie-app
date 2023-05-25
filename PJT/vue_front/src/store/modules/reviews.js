@@ -8,52 +8,89 @@ import _ from 'lodash'
 export default {
   // namespaced: true,
   state: {
-    articles: [],
-    article: {},
+    reviews: [],
+    review: {},
     currentUser: {},
   },
 
   getters: {
-    currentUser: state => state.currentUser,
-    articles: state => state.articles,
-    article: state => state.article,
+    currentUser: (state) => state.currentUser,
+    reviews: (state) => state.reviews,
+    review: (state) => state.review,
     isAuthor: (state, getters) => {
-      return state.article.user?.username === getters.currentUser.username
+      return state.review.user?.username === getters.currentUser.username;
     },
-    isArticle: state => !_.isEmpty(state.article),
-    articleLiking: state => _.some(state.article.article_like, {"pk":state.currentUser.pk})
+    isReview: (state) => !_.isEmpty(state.review),
+    reviewLiking: (state) =>
+      _.some(state.review.review_like, { pk: state.currentUser.pk }),
   },
 
   mutations: {
-    SET_CURRENT_USER: (state, user) => state.currentUser = user,
-    SET_ARTICLES: (state, articles) => state.articles = articles,
-    SET_ARTICLE: (state, article) => state.article = article,
-    SET_ARTICLE_COMMENTS: (state, comments) => (state.article.comments = comments),
+    SET_CURRENT_USER: (state, user) => (state.currentUser = user),
+    SET_REVIEWS: (state, reviews) => (state.reviews = reviews),
+    SET_REVIEW: (state, review) => (state.review = review),
+    SET_REVIEW_COMMENTS: (state, comments) =>
+      (state.review.comments = comments),
   },
 
   actions: {
-    fetchArticles({ commit, getters }) {
+    fetchReviewList({ commit, getters }, movie_id) {
       /* 게시글 목록 받아오기
-      GET: articles URL (token)
+      GET: reviews URL (token)
         성공하면
-          응답으로 받은 게시글들을 state.articles에 저장
+          응답으로 받은 게시글들을 state.reviews에 저장
         실패하면
           에러 메시지 표시
       */
       axios({
-        url: drf.articles.articles(),
+        url: drf.reviews.reviewList(movie_id),
         method: 'get',
         headers: getters.authHeader,
       })
-        .then(res => commit('SET_ARTICLES', res.data))
-        .catch(err => console.error(err.response))
+      .then((res) => {
+        for (const [key, value] of Object.entries(res.data)) {
+          //console.log(key);
+          console.log(value)
+          axios({
+            url: drf.accounts.user(res.data[key]['user']),
+            method: 'get',
+            headers: getters.authHeader,
+          })
+          .then((result) => {
+            console.log(result.data['username'])
+            res.data[key]['user'] = result.data['username'];
+          })
+          .catch((err) => console.error(err.response));
+        }
+        commit('SET_REVIEWS', res.data)
+      })
+      .catch((err) => console.error(err.response));
+    },
+    fetchReviews({ commit, getters }) {
+      /* 게시글 목록 받아오기
+      GET: reviews URL (token)
+        성공하면
+          응답으로 받은 게시글들을 state.reviews에 저장
+        실패하면
+          에러 메시지 표시
+      */
+      axios({
+        url: drf.reviews.reviews(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then((res) => { 
+          console.log(res.data)
+          commit('SET_REVIEWS', res.data)
+        })
+        .catch((err) => console.error(err.response));
     },
 
-    fetchArticle({ commit, getters }, articlePk) {
+    fetchReview({ commit, getters }, reviewPk) {
       /* 단일 게시글 받아오기
       GET: article URL (token)
         성공하면
-          응답으로 받은 게시글들을 state.articles에 저장
+          응답으로 받은 게시글들을 state.reviews에 저장
         실패하면
           단순 에러일 때는
             에러 메시지 표시
@@ -61,45 +98,44 @@ export default {
             NotFound404 로 이동
       */
       axios({
-        url: drf.articles.article(articlePk),
+        url: drf.reviews.article(reviewPk),
         method: 'get',
         headers: getters.authHeader,
       })
-        .then(res => commit('SET_ARTICLE', res.data))
-        .catch(err => {
-          console.error(err.response)
+        .then((res) => commit('SET_REVIEW', res.data))
+        .catch((err) => {
+          console.error(err.response);
           if (err.response.status === 404) {
-            router.push({ name: 'NotFound404' })
+            router.push({ name: 'NotFound404' });
           }
-        })
+        });
     },
 
-    createArticle({ commit, getters }, article) {
+    createReview({ commit, getters }, review) {
       /* 게시글 생성
-      POST: articles URL (게시글 입력정보, token)
+      POST: reviews URL (게시글 입력정보, token)
         성공하면
           응답으로 받은 게시글을 state.article에 저장
           ArticleDetailView 로 이동
         실패하면
           에러 메시지 표시
       */
-      
+
       axios({
-        url: drf.articles.articles(),
+        url: drf.reviews.reviews(),
         method: 'post',
-        data: article,
+        data: review,
         headers: getters.authHeader,
-      })
-        .then(res => {
-          commit('SET_ARTICLE', res.data)
-          router.push({
-            name: 'article',
-            params: { articlePk: getters.article.pk }
-          })
-        })
+      }).then((res) => {
+        commit('SET_REVIEW', res.data);
+        router.push({
+          name: 'review',
+          params: { reviewPk: getters.review.pk },
+        });
+      });
     },
 
-    updateArticle({ commit, getters }, { pk, title, content}) {
+    updateReview({ commit, getters }, { pk, title, content }) {
       /* 게시글 수정
       PUT: article URL (게시글 입력정보, token)
         성공하면
@@ -109,21 +145,20 @@ export default {
           에러 메시지 표시
       */
       axios({
-        url: drf.articles.article(pk),
+        url: drf.reviews.review(pk),
         method: 'put',
         data: { title, content },
         headers: getters.authHeader,
-      })
-        .then(res => {
-          commit('SET_ARTICLE', res.data)
-          router.push({
-            name: 'article',
-            params: { articlePk: getters.article.pk }
-          })
-        })
+      }).then((res) => {
+        commit('SET_REVIEW', res.data);
+        router.push({
+          name: 'review',
+          params: { reviewPk: getters.review.pk },
+        });
+      });
     },
 
-    deleteArticle({ commit, getters }, articlePk) {
+    deleteReview({ commit, getters }, reviewPk) {
       /* 게시글 삭제
       사용자가 확인을 받고
         DELETE: article URL (token)
@@ -133,22 +168,22 @@ export default {
           실패하면
             에러 메시지 표시
       */
-      
+
       if (confirm('정말 삭제하시겠습니까?')) {
         axios({
-          url: drf.articles.article(articlePk),
+          url: drf.reviews.review(reviewPk),
           method: 'delete',
           headers: getters.authHeader,
         })
           .then(() => {
-            commit('SET_ARTICLE', {})
-            router.push({ name: 'community' })
+            commit('SET_REVIEW', {});
+            router.push({ name: 'community' });
           })
-          .catch(err => console.error(err.response))
+          .catch((err) => console.error(err.response));
       }
     },
 
-    likeArticle({ commit, getters }, articlePk) {
+    likeReview({ commit, getters }, reviewPk) {
       /* 좋아요
       POST: likeArticle URL(token)
         성공하면
@@ -157,15 +192,15 @@ export default {
           에러 메시지 표시
       */
       axios({
-        url: drf.articles.likeArticle(articlePk),
+        url: drf.reviews.likeReview(reviewPk),
         method: 'post',
         headers: getters.authHeader,
       })
-        .then(res => commit('SET_ARTICLE', res.data))
-        .catch(err => console.error(err.response))
+        .then((res) => commit('SET_REVIEW', res.data))
+        .catch((err) => console.error(err.response));
     },
 
-		createComment({ commit, getters }, { articlePk, content }) {
+    createComment({ commit, getters }, { reviewPk, content }) {
       /* 댓글 생성
       POST: comments URL(댓글 입력 정보, token)
         성공하면
@@ -173,21 +208,21 @@ export default {
         실패하면
           에러 메시지 표시
       */
-      const comment = { content }
+      const comment = { content };
 
       axios({
-        url: drf.articles.comments(articlePk),
+        url: drf.reviews.comments(reviewPk),
         method: 'post',
         data: comment,
         headers: getters.authHeader,
       })
-        .then(res => {
-          commit('SET_ARTICLE_COMMENTS', res.data)
+        .then((res) => {
+          commit('SET_REVIEW_COMMENTS', res.data);
         })
-        .catch(err => console.error(err.response))
+        .catch((err) => console.error(err.response));
     },
 
-    updateComment({ commit, getters }, { articlePk, commentPk, content }) {
+    updateComment({ commit, getters }, { reviewPk, commentPk, content }) {
       /* 댓글 수정
       PUT: comment URL(댓글 입력 정보, token)
         성공하면
@@ -195,21 +230,21 @@ export default {
         실패하면
           에러 메시지 표시
       */
-      const comment = { content }
+      const comment = { content };
 
       axios({
-        url: drf.articles.comment(articlePk, commentPk),
+        url: drf.reviews.comment(reviewPk, commentPk),
         method: 'put',
         data: comment,
         headers: getters.authHeader,
       })
-        .then(res => {
-          commit('SET_ARTICLE_COMMENTS', res.data)
+        .then((res) => {
+          commit('SET_REVIEW_COMMENTS', res.data);
         })
-        .catch(err => console.error(err.response))
+        .catch((err) => console.error(err.response));
     },
 
-    deleteComment({ commit, getters }, { articlePk, commentPk }) {
+    deleteComment({ commit, getters }, { reviewPk, commentPk }) {
       /* 댓글 삭제
       사용자가 확인을 받고
         DELETE: comment URL (token)
@@ -218,18 +253,18 @@ export default {
           실패하면
             에러 메시지 표시
       */
-        if (confirm('정말 삭제하시겠습니까?')) {
-          axios({
-            url: drf.articles.comment(articlePk, commentPk),
-            method: 'delete',
-            data: {},
-            headers: getters.authHeader,
+      if (confirm('정말 삭제하시겠습니까?')) {
+        axios({
+          url: drf.reviews.comment(reviewPk, commentPk),
+          method: 'delete',
+          data: {},
+          headers: getters.authHeader,
+        })
+          .then((res) => {
+            commit('SET_REVIEW_COMMENTS', res.data);
           })
-            .then(res => {
-              commit('SET_ARTICLE_COMMENTS', res.data)
-            })
-            .catch(err => console.error(err.response))
-        }
-      },
+          .catch((err) => console.error(err.response));
+      }
+    },
   },
-}
+};
