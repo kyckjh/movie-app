@@ -9,6 +9,7 @@ import LogoutView from '@/views/LogoutView.vue'
 import ProfileView from '../views/ProfilePageView.vue'
 
 import MovieDetailView from '@/views/MovieDetailView.vue';
+import ReviewDetailView from '@/components/community/ReviewDetailView.vue';
 
 Vue.use(VueRouter)
 
@@ -41,7 +42,12 @@ const routes = [
   {
     path: '/profile/:username',
     name: 'ProfilePageView',
-    component: ProfileView
+    component: ProfileView,
+  },
+  {
+    path: '/reviewdetail/:review_id',
+    name: 'ReviewDetailView',
+    component: ReviewDetailView,
   },
   // {
   //   path: '/community',
