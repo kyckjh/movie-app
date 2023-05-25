@@ -9,14 +9,21 @@
       </router-link> -->
     </div>
     
-    <div v-for="review in reviews" :key="Number(review.pk)" class="text-black">
+    <div v-for="review in reviews" :key="Number(review.pk)" class="text-black" >
       <div class="card mb-3 card-bg">
         <div class="card-header fs-4">{{ review.title }}</div>
         <div class="card-body">
           <p class="card-text fs-5 m-3">{{ review.content.slice(0,300) }}...</p>
         </div>
-        <div class="card-footer fs-6 text-end">updated at {{ review.updated_at.slice(0, 10) }}</div>
+        <div class="card-footer fs-6 text-end">
+          <p> updated at {{ review.updated_at.slice(0, 10) }}</p>
+          <a 
+          :href="`http://localhost:8080/reviewdetail/${ review.pk }`"
+          class="btn btn-outline-secondary text-black fw-bold"
+          >자세히보기</a>
+        </div>
       </div>
+      
     </div>
     
   </div>

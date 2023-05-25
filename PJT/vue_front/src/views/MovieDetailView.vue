@@ -25,7 +25,7 @@
               <div class="mt-3">
                   <button id="follow" @click="likeMovie(moviePk)" 
                   class="heart-button" 
-                  :class="{active : isLike}">
+                  :class="{active : is_liking}">
                     <div class="heart-flip"></div>
                     <span>Like<span>d</span></span>
                   </button>
@@ -70,6 +70,7 @@ export default {
       vote_average: '',
       genre_ids: [],
       backdrop_path: '',
+      is_liking: false,
     }
   },
   components: {
@@ -133,11 +134,23 @@ export default {
     })
     this.fetchCurrentUser()
     this.search(this.movie)
+    setTimeout(() => {
+      if (this.get_movie_data.like_users.includes(this.currentUser.pk)) {
+      this.is_liking = true
+    }
+    }, 500);
   },
   mounted() {
     document.querySelectorAll('.heart, .heart-button')
     .forEach(button => button.addEventListener('click', () => 
     button.classList.toggle('active')));
+    
+  },
+  updated() {
+
+    // if (this.get_movie_data.like_users.includes(this.currentUser.pk)) {
+    //   this.is_liking = true
+    // }
   },
   watch: {
       '$route' (to, from) {

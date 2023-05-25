@@ -21,7 +21,7 @@ import _ from 'lodash'
        get_movie_data: state => state.movie_data,
        get_movie: state => state.movie,
        get_comments: state => state.comments,
-       isLike: state => _.some(state.movie_data.like_user,{"pk":state.currentUser.pk}),
+       isLike: state => _.some(state.movie_data.like_users,{"pk":state.currentUser.pk}),
     },
     mutations: {
         SET_CURRENT_USER: (state, user) => state.currentUser = user,
