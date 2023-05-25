@@ -48,6 +48,7 @@ export default {
                 this.movies = res.data.results.slice(0, 100)
             })
             .catch(err => {
+                console.log(API_KEY)
                 console.log(err)
             })
         }
