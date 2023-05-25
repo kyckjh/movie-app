@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div id="main">
       <div id="title">게시글 작성</div>
       <community-create-form :review="review" action="작성하기"></community-create-form>
@@ -37,4 +37,4 @@
       margin: 80px 30px 80px 150px;
     }
   </style>
-  
+   -->

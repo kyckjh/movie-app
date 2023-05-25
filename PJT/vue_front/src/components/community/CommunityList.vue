@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="haha">
       <div class="community d-flex justify-content-between">
         <router-link :to="{ name: 'CommunityCreateView' }">
@@ -68,4 +68,4 @@
   
   <style>
 
-  </style>
+  </style> -->

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="app">
         <h1>Community</h1>
 
@@ -34,4 +34,4 @@ import CommunityList from '../components/community/CommunityList.vue'
       margin-bottom: 100px;
     }
   
-  </style>
+  </style> -->
