@@ -66,12 +66,12 @@ export default {
         // })        
         axios.get("http://localhost:8000/api/v1/" + this.$route.params.movie_id + "/", {})
         .then(res => {
-            console.log('movies:             ')
-            console.log(res.data)
+            //console.log('movies:             ')
+            //console.log(res.data)
             this.movies = res.data
-            console.log(this.movies.actor_ids)
+            //console.log(this.movies.actor_ids)
             this.actor_ids = this.movies.actor_ids
-            console.log(this.actor_ids.length)
+            //console.log(this.actor_ids.length)
         }),
         this.fetchCurrentUser()
     }

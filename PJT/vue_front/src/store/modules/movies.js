@@ -6,7 +6,7 @@ import _ from 'lodash'
 // import { _ } from 'core-js';
  const URL = "https://api.themoviedb.org/3/search/movie"
  const API_KEY = process.env.VUE_APP_TMDB_API_KEY
-
+    
  export default{
     state: {
         //token: "",
@@ -37,8 +37,8 @@ import _ from 'lodash'
                 method: 'get',
             })
             .then(res => {
-                console.log('movie ' + res.data.id);
-                console.log(res.data)
+                //console.log('movie ' + res.data.id);
+                //console.log(res.data)
                 localStorage.setItem('movie', res.data.id)
                 commit("SET_MOVIE_ID", movie_id)
                 commit("SET_MOVIE_DATA", res.data)
@@ -50,7 +50,7 @@ import _ from 'lodash'
                     method: 'get',
                 })
                     .then((res) => {
-                    console.log(res.data);
+                    //console.log(res.data);
                     commit("SET_COMMENT", res.data)
                     })
                     .catch((err) => {
@@ -80,8 +80,8 @@ import _ from 'lodash'
                 }
             })
             .then(res => {
-                console.log(res.data)
-                console.log('movie id: '+res.data.results[0].id)
+                //console.log(res.data)
+                //console.log('movie id: '+res.data.results[0].id)
                 const movie_id = res.data.results[0].id
                 dispatch("search", movie_id)
                 commit("SET_MOVIE_DATA", res.data.results[0])
@@ -95,8 +95,6 @@ import _ from 'lodash'
             })
         },
         create_movie_Comment({ commit, getters }, { movie_id, content}) {
-            console.log(movie_id)
-            console.log(content)
             const comment = { content, }
             console.log(comment)
             axios({

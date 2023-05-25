@@ -27,12 +27,14 @@
 
         <hr>
         <movie-comment-list :movie_id="movie"></movie-comment-list>
+        <review-list :movie_id="movie"></review-list>
     </div>
   </template>
   
 <script>
 import MovieCommentList from '@/components/movie/MovieCommentList.vue'
 import ActorsList from '@/components/movie/ActorsList.vue'
+import ReviewList from '@/components/community/ReviewList.vue'
 
 import axios from "axios"
 import { mapActions, mapGetters } from "vuex"
@@ -59,6 +61,7 @@ export default {
   components: {
     MovieCommentList,
     ActorsList,
+    ReviewList,
   },
   computed: {
       ...mapGetters(['get_movie', 'isLike', 'currentUser', 'get_movie_data']),
