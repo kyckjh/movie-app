@@ -1,7 +1,8 @@
 <template>
     <div>
         <profile-item></profile-item>
-        <profile-movie-list :likeMovies="profile.like_movies"> </profile-movie-list>
+        <profile-movie-list :likeMovies="profile.like_movies">
+        </profile-movie-list>
     </div>
 </template>
 

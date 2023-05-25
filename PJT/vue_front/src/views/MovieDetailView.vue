@@ -38,6 +38,7 @@ import ReviewList from '@/components/community/ReviewList.vue'
 
 import axios from "axios"
 import { mapActions, mapGetters } from "vuex"
+
 const URL = "https://api.themoviedb.org/3/movie/"
 const API_KEY = process.env.VUE_APP_TMDB_API_KEY
 
