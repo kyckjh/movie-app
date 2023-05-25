@@ -42,7 +42,8 @@ def actor_detail(request, actor_pk):
 def movie_comment_list_or_create(request, movie_pk):
     def comment_list():
         movie = get_object_or_404(Movie, pk=movie_pk)
-        comments = get_list_or_404(MovieComment, movie=movie)[::-1]
+        comments = MovieComment.objects.filter(movie=movie)
+        #comments = get_list_or_404(MovieComment, movie=movie)[::-1]
         serializer = MovieCommentListSerializer(comments, many=True)
         return Response(serializer.data)
     

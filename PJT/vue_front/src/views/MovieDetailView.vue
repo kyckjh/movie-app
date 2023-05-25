@@ -4,17 +4,17 @@
         <div>
             <button id="follow" @click="likeMovie(moviePk)" 
             class="heart-button" 
-            :class="{active : isLiking}">
+            :class="{active : isLike}">
               <div class="heart-flip"></div>
               <span>Like<span>d</span></span>
             </button>
           </div>
         <div>
-          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >
+          <a :href="poster_img" >
             <div class="img">
-              <img :src="poster_img" alt="poster">
+              <img :src="poster_img" alt="poster" style="width:500px;">
             </div>
-            </a>
+          </a>
 
           <h3>제목: {{title}}</h3>
           <h5>줄거리: {{overview}}</h5>
@@ -60,7 +60,7 @@ export default {
     ActorsList,
   },
   computed: {
-      ...mapGetters(['get_movie', 'isLiking', 'currentUser', 'get_movie_data']),
+      ...mapGetters(['get_movie', 'isLike', 'currentUser', 'get_movie_data']),
     poster_img(){
         return "https://image.tmdb.org/t/p/original/" + this.poster_path
     },

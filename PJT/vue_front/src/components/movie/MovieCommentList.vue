@@ -21,7 +21,7 @@ export default {
     MovieCommentItem,
   },
   props: {
-    movie_id: Number,
+    movie_id: String,
   },
   data: function() {
     return {

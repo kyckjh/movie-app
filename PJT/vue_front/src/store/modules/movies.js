@@ -42,28 +42,30 @@ import _ from 'lodash'
                 localStorage.setItem('movie', res.data.id)
                 commit("SET_MOVIE_ID", movie_id)
                 commit("SET_MOVIE_DATA", res.data)
-                    axios({
-                      url:
-                        'http://localhost:8000/api/v1/' +
-                        res.data.id +
-                        '/comments/',
-                      method: 'get',
+                axios({
+                    url:
+                    'http://localhost:8000/api/v1/' +
+                    res.data.id +
+                    '/comments/',
+                    method: 'get',
+                })
+                    .then((res) => {
+                    console.log(res.data);
+                    commit("SET_COMMENT", res.data)
                     })
-                      .then((res) => {
-                        console.log(res.data);
-                        //commit("SET_COMMENT", res.data)
-                      })
-                      .catch((err) => {
-                        //alert('err');
-                        if (err.response.status === 404) {
-                            console.log('no comments')
-                          //commit("SET_MOVIES_COMMENT", {})
-                          //router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}})
-                        }
-                      });
-                    router.push({ name: 'MovieDetailView', params: { movie_id: movie_id}}).catch(err => err)
+                    .catch((err) => {
+                    if (err.response.status === 404) {
+                        commit("SET_MOVIES_COMMENT", {})
+                        router.push({
+                          name: 'MovieDetailView',
+                          params: { movie_id: movie_id.toString() },
+                        });
+                    }
+                    });
+                router.push({ name: 'MovieDetailView', params: { movie_id: movie_id.toString()}}).catch(err => err)
             })
             .catch(err => {
+                alert(err)
                 console.log(err)
                 router.push({ name: 'MainView'}).catch(err => err)
             })
