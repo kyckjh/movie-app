@@ -1,28 +1,40 @@
 <template>
-    <div class="login_logo display-4">
-        Movie Detail
-        <div>
-            <button id="follow" @click="likeMovie(moviePk)" 
-            class="heart-button" 
-            :class="{active : isLike}">
-              <div class="heart-flip"></div>
-              <span>Like<span>d</span></span>
-            </button>
-          </div>
-        <div>
-          <a :href="poster_img" >
-            <div class="img">
-              <img :src="poster_img" alt="poster" style="width:500px;">
+    <div class="m-5">      
+      <div class="back-img" :style="{'background-image':`url(${backdrop_img})`}">
+            </div> 
+        <div class="container">
+          
+          <div class="row mt-5">
+            <div class="col-md-4 col-sm-12 zindex">
+              <a :href="poster_img" >
+                <div class="img">
+                  <img class="w-100" :src="poster_img" alt="poster">
+                </div>
+              </a>
             </div>
-          </a>
-
-          <h3>제목: {{title}}</h3>
-          <h5>줄거리: {{overview}}</h5>
-          <h3>개봉일 : {{release_date }}</h3>
-          <h3>관객 수 : {{popularity }}</h3>
-          <!-- <h3>like users: {{like_users}}</h3> -->
-          <h3>평점: {{ vote_average }}</h3>
+            
+            <div class="col-md-8 col-sm-12 text-start zindex">   
+              <h1>{{title}}</h1>
+              <h4>개요</h4>
+              <h5>{{overview}}</h5>
+              <span>{{ release_date }} ● </span>
+              <span>평점 {{ Math.round(vote_average*100)/100 }} ● </span>           
+              <span>관객 수 : {{ Math.round(popularity) }} k ●</span>&nbsp;
+              <span v-for="(genre, index) in genre_ids" :key="index">&nbsp;{{ genre.name }}&nbsp; </span>
+              
+              <div class="mt-3">
+                  <button id="follow" @click="likeMovie(moviePk)" 
+                  class="heart-button" 
+                  :class="{active : isLike}">
+                    <div class="heart-flip"></div>
+                    <span>Like<span>d</span></span>
+                  </button>
+              </div>
+            </div>
+          </div>
         </div>
+        
+       
         <actors-list :movie_id="movie"></actors-list>
 
         <hr>
@@ -56,6 +68,8 @@ export default {
       popularity: '',
       like_users: [],
       vote_average: '',
+      genre_ids: [],
+      backdrop_path: '',
     }
   },
   components: {
@@ -67,6 +81,9 @@ export default {
       ...mapGetters(['get_movie', 'isLike', 'currentUser', 'get_movie_data']),
     poster_img(){
         return "https://image.tmdb.org/t/p/original/" + this.poster_path
+    },
+    backdrop_img(){
+        return "https://image.tmdb.org/t/p/original/" + this.backdrop_path
     },
   },
   methods: {
@@ -99,7 +116,8 @@ export default {
       }
     })
     .then(res => {
-      //alert(res.data)
+      console.log('>>>>>>>>>>>>>>>>>>>>>>')
+      console.log(res.data)
       this.title = res.data.title
       this.overview = res.data.overview
       this.release_date = res.data.release_date
@@ -107,7 +125,8 @@ export default {
       this.poster_path  = res.data.poster_path 
       this.like_users = res.data.like_users
       this.vote_average = res.data.vote_average
-
+      this.genre_ids = res.data.genres
+      this.backdrop_path = res.data.backdrop_path
     })
     .catch(err => {
       alert(err)
@@ -252,5 +271,17 @@ export default {
     --span-opacity: 1;
     --span-x: 0;
   }
-
+  .zindex {
+    z-index: 2;
+  }
+  .back-img {
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+    height:100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    z-index: 1;
+  }
 </style>

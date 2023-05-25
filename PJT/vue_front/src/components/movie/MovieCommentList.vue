@@ -1,5 +1,5 @@
 <template>
-  <div class="text-start m-5">
+  <div class="text-start mt-5">
     <h2>댓글</h2>
     
     <div>
@@ -10,13 +10,13 @@
           <div class="d-flex row">
             <div>
               <hr>
-              <h2>댓글 쓰기</h2>
+              <h2 class="mt-5">댓글 쓰기</h2>
               <div class="d-flex justify-content-between">                
                 <div class="fs-3">
                   <label for="comment_w" id="user">{{ currentUser.username }}</label>
                 </div>             
               </div>
-              <textarea name="" id="comment_w" cols="30" rows="5" autocomplete="off" autocorrect="off" maxlength="200" v-model="commentform.content"></textarea>
+              <textarea style="width:100%;" name="" id="comment_w" rows="5" autocomplete="off" autocorrect="off" maxlength="200" v-model="commentform.content"></textarea>
             </div>
             <div class=" d-flex justify-content-end">
               <button>등록</button>

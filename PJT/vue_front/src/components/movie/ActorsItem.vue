@@ -4,11 +4,11 @@
         <img v-if="image_path == null" 
         src="@/assets/annonymous.jpg" alt="actor">
         <img v-else :src="actorImg" alt="actor">
-        <div class="carousel-text text-black" style="height:100px;">
+        <div class="carousel-text text-black card-bg" style="height:100px;">
             <p class="fw-bold fs-5 mb-1">{{name}} </p>
             <p class="fs-6 mb-0">{{ character }}</p>
         </div>
-  </div>
+    </div>
 
 </template>
 
@@ -56,5 +56,7 @@ export default {
 </script>
 
 <style>
-
+.card-bg {
+  background-color:rgb(216, 216, 216);
+}
 </style>
