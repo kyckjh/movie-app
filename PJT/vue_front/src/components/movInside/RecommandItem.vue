@@ -1,7 +1,7 @@
 <template>
     <div>
       <div>
-          <a :href="`http://localhost:8082/moviedetail/${ movie.id }`" >
+          <a :href="`http://localhost:8080/moviedetail/${ movie.id }`" >
               <div class="img">
                   <img :src="poster_img" alt="poster">
               </div>

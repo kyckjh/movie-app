@@ -13,7 +13,7 @@
         </div>
 
         <div class="d-flex me-3">
-          <router-link to="/community" class="nav-link fw-bold text-white" active-class="active">Community</router-link>
+          <!-- <router-link to="/community" class="nav-link fw-bold text-white" active-class="active">Community</router-link> -->
 
           <router-link to="/" class="nav-link fw-bold text-white"
             active-class="active">Search</router-link>
@@ -56,8 +56,8 @@
           <div><a href="https://github.com/DasisCore/last-project"><i class="fa-brands fa-github"></i></a></div>
           <div style="font-size: 10px;">MADE BY</div>
           <div class="d-flex">
-            <div style="font-size: 15px; margin-right: 10px;">Kang Yeah-Chan</div>
-            <div style="font-size: 15px; margin-left: 10px;">Rinoue Isoroku</div>
+            <div style="font-size: 15px; margin-right: 10px;">Kang Ye-Chan</div>
+            <div style="font-size: 15px; margin-left: 10px;">Lee Sang-Hyuk</div>
           </div>
         </div>
       </div>

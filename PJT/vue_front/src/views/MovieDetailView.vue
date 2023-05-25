@@ -136,9 +136,16 @@ export default {
   },
   mounted() {
     document.querySelectorAll('.heart, .heart-button')
-    .forEach(button => button.addEventListener('click', () => button.classList.toggle('active')));
+    .forEach(button => button.addEventListener('click', () => 
+    button.classList.toggle('active')));
   },
-
+  watch: {
+      '$route' (to, from) {
+        location.reload()
+        console.log(to)
+        console.log(from)
+      }
+  }
 }
 </script>
 
