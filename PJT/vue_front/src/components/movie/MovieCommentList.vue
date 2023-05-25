@@ -4,8 +4,24 @@
     
     <div>
       <movie-comment-item v-for="comment in get_comments" :key="comment.id" :comment="comment"></movie-comment-item>
-      
     </div>
+    <div v-if="isLoggedIn" id="comment_writer">
+        <form @submit.prevent="create_movie_Comment(commentform); add();">
+          <div class="d-flex row" style="margin: 10px 10px 10px 10px;">
+            <div>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <label for="comment_w" id="user">{{ currentUser.username }}</label>
+                </div>             
+              </div>
+              <textarea name="" id="comment_w" cols="30" rows="10" autocomplete="off" autocorrect="off" maxlength="200" v-model="commentform.content"></textarea>
+            </div>
+            <div class=" d-flex justify-content-end">
+              <button>등록</button>
+            </div>
+          </div>
+        </form>
+      </div>
   </div>
 </template>
 
@@ -28,7 +44,6 @@ export default {
       commentform: {
         movie_id: this.$route.params.movie_id,
         content: "",
-        rate: 0,
       },
       //get_comments: {},
       num: 0,

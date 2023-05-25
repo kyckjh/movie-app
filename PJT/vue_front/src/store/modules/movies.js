@@ -94,10 +94,10 @@ import _ from 'lodash'
                 router.push({ name: 'MainView' }).catch((err) => err);
             })
         },
-        create_movie_Comment({ commit, getters }, { movie_id, content, rate}) {
+        create_movie_Comment({ commit, getters }, { movie_id, content}) {
             console.log(movie_id)
             console.log(content)
-            const comment = { content, rate }
+            const comment = { content, }
             console.log(comment)
             axios({
                 url: drf.movies.movie_comment(movie_id),
